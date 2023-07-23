@@ -173,42 +173,54 @@ export default {
             <h5 class="fs-17 text-center mb-0">Active ICOs</h5>
           </b-card-body>
         </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/btc.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Data Wallet</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $15,00,000 / $13,75,954
-              <b-badge variant="soft-success" class="badge-soft-success">89.97%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  4.8 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-danger mb-0">
-                <i class="ri-time-line align-bottom"></i> 05 Days
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
+       <b-card no-body class="mb-2">
+         <b-card-body>
+           <div class="d-flex mb-3">
+             <div class="flex-shrink-0 avatar-sm">
+               <div class="avatar-title bg-light rounded">
+                 <img src="@/assets/images/svg/crypto-icons/btc.svg" alt="" class="avatar-xxs" />
+               </div>
+             </div>
+             <div class="flex-grow-1 ms-3">
+               <h5 class="fs-15 mb-1">Data Wallet</h5>
+               <p class="text-muted mb-2">Blockchain Services</p>
+             </div>
+             <div>
+               <!-- Add the three buttons here -->
+               <button class="btn btn-outline-danger m-1 " >
+                     <i class="ri-delete-bin-line"></i> 
+                   </button>
+            
+                   <!-- Button for editing data -->
+                   <button class="btn btn-outline-warning" >
+                     <i class="ri-edit-line"></i> Edit
+                   </button>
+            
+                   <!-- Button for adding data -->
+                   <button class="btn btn-outline-success m-1" >
+                     <i class="ri-add-line"></i> Add
+                   </button>
+             </div>
+           </div>
+           <h6 class="text-muted mb-0">
+             $15,00,000 / $13,75,954
+             <b-badge variant="soft-success" class="badge-soft-success">89.97%</b-badge>
+           </h6>
+         </b-card-body>
+         <b-card-body class="border-top border-top-dashed">
+           <div class="d-flex">
+             <div class="flex-grow-1">
+               <h6 class="mb-0">
+                 4.8 <i class="ri-star-fill align-bottom text-warning"></i>
+               </h6>
+             </div>
+             <h6 class="flex-shrink-0 text-danger mb-0">
+               <i class="ri-time-line align-bottom"></i> 05 Days
+             </h6>
+           </div>
+         </b-card-body>
+       </b-card>
+       
         <b-card no-body class="mb-2">
           <b-card-body>
             <div class="d-flex mb-3">
