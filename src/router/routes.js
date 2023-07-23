@@ -68,60 +68,70 @@ export default [
     component: () => import("../views/dashboard/crypto/index"),
   },
   {
+    //used must
     path: "/orders",
     name: "crypto orders",
     meta: { title: "Orders", authRequired: true },
     component: () => import("../views/apps/crypto/orders"),
   },
   {
+    //used must
     path: "/leads",
     name: "crypto leads",
     meta: { title: "Leads", authRequired: true },
     component: () => import("../views/apps/crm/leads"),
   },
   {
+    //used must
     path: "/buy-sell",
     name: "crypto buy/sell",
     meta: { title: "Buy & Sell", authRequired: true },
     component: () => import("../views/apps/crypto/buy-sell"),
   },
   {
+    //used must
     path: "/strategies",
     name: "crypto strategies",
     meta: { title: "Strategies ", authRequired: true },
     component: () => import("../views/apps/crypto/ico"),
   },
   {
+    //used must
     path: "/my-wallet",
     name: "crypto wallet",
     meta: { title: "My Wallet", authRequired: true },
     component: () => import("../views/apps/crypto/wallet"),
   },
   {
+    //used must
     path: "/positions",
     name: "crypto Positions",
     meta: { title: "Positions", authRequired: true },
     component: () => import("../views/apps/crypto/positions"),
   },
   {
+    //used must
     path: "/transactions",
     name: "crypto transactions",
     meta: { title: "Transactions", authRequired: true },
     component: () => import("../views/apps/crypto/transactions"),
   },
   {
+    //used must
     path: "/billing",
     name: "crypto billing",
     meta: { title: "Billing", authRequired: true },
     component: () => import("../views/apps/crypto/transactions"),
   },
   {
+    //used must
     path: "/broker",
     name: "broker",
     meta: { title: "broker", authRequired: true },
     component: () => import("../views/apps/nft/nft-wallet"),
   },
   {
+    //used must
     path: "/profile-kyc",
     name: "crypto kyc",
     meta: { title: "KYC Application", authRequired: true },
@@ -154,30 +164,35 @@ export default [
     component: () => import("../views/dashboard/crypto/index"),
   },
   {
+    //cant used in anywhere
     path: "/admin/users",
     name: "admin crypto users",
     meta: { title: "Users", authRequired: true },
     component: () => import("../views/apps/crm/users"),
   },
   {
+     //cant used in anywhere
     path: "/admin/orders",
     name: "admin crypto orders",
     meta: { title: "Orders", authRequired: true },
     component: () => import("../views/apps/crypto/orders"),
   },
   {
+     //cant used in anywhere
     path: "/admin/leads",
     name: "admin crypto leads",
     meta: { title: "Leads", authRequired: true },
     component: () => import("../views/apps/crm/leads"),
   },
   {
+     //cant used in anywhere
     path: "/admin/buy-sell",
     name: "admin crypto buy/sell",
     meta: { title: "Buy & Sell", authRequired: true },
     component: () => import("../views/apps/crypto/buy-sell"),
   },
   {
+    //cant used in anywhere
     path: "/admin/strategies",
     name: "admin crypto strategies",
     meta: { title: "Strategies ", authRequired: true },
@@ -253,6 +268,8 @@ export default [
     component: () => import("../views/dashboard/crypto/index"),
   },
   {
+    //can not used in site
+     //but used in horizontal and two column
     path: "/dashboard/projects",
     name: "dashboard-projects",
     meta: {
@@ -261,6 +278,9 @@ export default [
     component: () => import("../views/dashboard/projects/index"),
   },
   {
+    //can not used in main menu site
+   //but used in horizontal and two column
+
     path: "/dashboard/crm",
     name: "dashboard-crm",
     meta: {
@@ -269,6 +289,9 @@ export default [
     component: () => import("../views/dashboard/crm/index"),
   },
   {
+    //can not used in main menu site
+  //but used in horizontal and two column
+
     path: "/dashboard/analytics",
     name: "dashboard-analytics",
     meta: {
@@ -277,6 +300,8 @@ export default [
     component: () => import("../views/dashboard/analytics/index"),
   },
   {
+     //can not used in main menu site
+  //but used in horizontal and two column
     path: "/dashboard/nft",
     name: "dashboard-nft",
     meta: {
@@ -285,6 +310,9 @@ export default [
     component: () => import("../views/dashboard/nft/index"),
   },
   {
+      //can not used in main menu site
+  //but used in horizontal and two column
+
     path: "/dashboard/job",
     name: "dashboard-job",
     meta: {
@@ -306,12 +334,16 @@ export default [
     component: () => import("../views/auth/logout/basic")
   },
   {
+
+    //used in multiple places
+
     path: "/calendar",
     name: "calendar",
     meta: { title: "Calendar", authRequired: true },
     component: () => import("../views/calendar/index"),
   },
   {
+     //used in multiple places
     path: "/chat",
     name: "chat",
     meta: { title: "Chat", authRequired: true },

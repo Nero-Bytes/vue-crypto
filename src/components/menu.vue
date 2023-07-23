@@ -1393,7 +1393,7 @@ export default {
               <span data-key="t-broker">{{ $t("t-broker") }}</span>
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <b-link href="#sidebarProfile" class="nav-link" data-bs-toggle="collapse" role="button"
               aria-expanded="false" aria-controls="sidebarProfile">
               <i class="ri-user-line"></i>
@@ -1423,7 +1423,7 @@ export default {
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link menu-link" :to="{ name: 'crypto strategies' }">
               <i class="ri-file-chart-line"></i>
@@ -1483,7 +1483,7 @@ export default {
               <span data-key="t-broker">{{ $t("t-broker") }}</span>
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <b-link href="#sidebarProfile" class="nav-link" data-bs-toggle="collapse" role="button"
               aria-expanded="false" aria-controls="sidebarProfile">
               <i class="ri-user-line"></i>
@@ -1513,7 +1513,7 @@ export default {
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link menu-link" :to="{ name: 'admin crypto strategies' }">
               <i class="ri-file-chart-line"></i>
