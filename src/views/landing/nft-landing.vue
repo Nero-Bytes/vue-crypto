@@ -141,9 +141,9 @@ export default {
                         </li>
                     </ul>
 
-                    <div class="">
+                    <!-- <div class="">
                         <router-link to="/apps/nft-wallet" class="btn btn-success">Wallet Connect</router-link>
-                    </div>
+                    </div> -->
                 </b-collapse>
 
             </b-container>
@@ -164,10 +164,10 @@ export default {
                                 physical works of art be turned into NFTs?.</p>
 
                             <div class="hstack gap-2 justify-content-center">
-                                <router-link to="/apps/nft-create" class="btn btn-primary">Create Own <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link>
-                                <router-link to="/apps/nft-explore" class="btn btn-danger">Explore Now <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link>
+                                <!-- <router-link to="/apps/nft-create" class="btn btn-primary">Create Own <i
+                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link> -->
+                                <!-- <router-link to="/apps/nft-explore" class="btn btn-danger">Explore Now <i
+                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link> -->
                             </div>
                         </div>
                     </b-col>
@@ -281,8 +281,8 @@ export default {
                                         class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
 
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">Creative Filtered
-                                        Portrait</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">Creative Filtered
+                                        Portrait</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Photography</p>
                             </b-card-body>
@@ -315,7 +315,7 @@ export default {
                                 <p class="fw-medium mb-0 float-end"><i
                                         class="mdi mdi-heart text-danger align-middle"></i> 23.63k </p>
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">The Chirstoper</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">The Chirstoper</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Music</p>
                             </b-card-body>
@@ -349,7 +349,7 @@ export default {
                                 <p class="fw-medium mb-0 float-end"><i
                                         class="mdi mdi-heart text-danger align-middle"></i> 15.93k </p>
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">Evolved Reality</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">Evolved Reality</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Video</p>
                             </b-card-body>
@@ -383,7 +383,7 @@ export default {
                                         class="mdi mdi-heart text-danger align-middle"></i> 14.85k </p>
 
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">Abstract Face Painting</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">Abstract Face Painting</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Collectibles</p>
                             </b-card-body>
@@ -417,7 +417,7 @@ export default {
                                         class="mdi mdi-heart text-danger align-middle"></i> 64.10k </p>
 
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">Long-tailed Macaque</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">Long-tailed Macaque</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Artwork</p>
                             </b-card-body>
@@ -451,7 +451,7 @@ export default {
                                         class="mdi mdi-heart text-danger align-middle"></i> 36.42k </p>
 
                                 <h5 class="mb-1">
-                                    <router-link to="/apps/nft-item-detail">Robotic Body Art</router-link>
+                                    <!-- <router-link to="/apps/nft-item-detail">Robotic Body Art</router-link> -->
                                 </h5>
                                 <p class="text-muted mb-0">Artwork</p>
                             </b-card-body>
@@ -720,8 +720,8 @@ export default {
                     <b-col lg="12">
                         <div class="d-flex align-items-center mb-5">
                             <h2 class="mb-0 fw-semibold lh-base flex-grow-1">Discover Items</h2>
-                            <router-link to="/apps/nft-explore" class="btn btn-primary">View All <i
-                                    class="ri-arrow-right-line align-bottom"></i></router-link>
+                            <!-- <router-link to="/apps/nft-explore" class="btn btn-primary">View All <i
+                                    class="ri-arrow-right-line align-bottom"></i></router-link> -->
                         </div>
                     </b-col>
                 </b-row>
@@ -757,8 +757,8 @@ export default {
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 97.8 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
-                                        <router-link to="/apps/nft-item-detail">Patterns arts &amp;
-                                            culture</router-link>
+                                        <!-- <router-link to="/apps/nft-item-detail">Patterns arts &amp;
+                                            culture</router-link> -->
                                     </h6>
                                 </div>
                             </b-card-body>
@@ -795,7 +795,7 @@ export default {
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 475.23 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
-                                        <router-link to="/apps/nft-item-detail">Evolved Reality</router-link>
+                                        <!-- <router-link to="/apps/nft-item-detail">Evolved Reality</router-link> -->
                                     </h6>
                                 </div>
                             </b-card-body>
@@ -833,8 +833,8 @@ export default {
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 701.38 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
-                                        <router-link to="/apps/nft-item-detail">Long-tailed
-                                            macaque</router-link>
+                                        <!-- <router-link to="/apps/nft-item-detail">Long-tailed
+                                            macaque</router-link> -->
                                     </h6>
                                 </div>
                             </b-card-body>
@@ -1040,10 +1040,10 @@ export default {
 
                     <b-col sm="auto">
                         <div>
-                            <router-link to="/apps/nft-create" class="btn bg-gradient btn-danger">Create NFT
-                            </router-link>
-                            <router-link to="/apps/nft-explore" class="btn bg-gradient btn-info">Discover More
-                            </router-link>
+                            <!-- <router-link to="/apps/nft-create" class="btn bg-gradient btn-danger">Create NFT
+                            </router-link> -->
+                            <!-- <router-link to="/apps/nft-explore" class="btn bg-gradient btn-info">Discover More
+                            </router-link> -->
                         </div>
                     </b-col>
 
@@ -1081,9 +1081,9 @@ export default {
                                         <li>
                                             <router-link to="">Gallery</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/apps/projects-list">Projects</router-link>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <router-link to="">Timeline</router-link>
                                         </li>
@@ -1097,18 +1097,18 @@ export default {
                                         <li>
                                             <router-link to="/calendar">Calendar</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/mailbox">Mailbox</router-link>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <router-link to="/chat">Chat</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/apps/crm-deals">Deals</router-link>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <router-link to="/apps/tasks-kanban">kanban board</router-link>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </b-col>

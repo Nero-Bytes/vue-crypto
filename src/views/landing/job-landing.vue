@@ -1369,18 +1369,18 @@ export default {
                                 <h5 class="text-white mb-0">For Jobs</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
-                                        <li>
+                                        <!-- <li>
                                             <b-link href="/jobs/lists">Job List</b-link>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <b-link href="/jobs/application">application</b-link>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <b-link href="/jobs/new">New Job</b-link>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <b-link href="/jobs/companies-list">Company List</b-link>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </b-col>

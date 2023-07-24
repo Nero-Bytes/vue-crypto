@@ -2207,7 +2207,7 @@ export default {
                         <h6 class="mb-1">Added new <span class="fw-semibold">style collection</span></h6>
                         <p class="text-muted mb-1">By Nesta Technologies</p>
                         <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2 w-75">
-                          <b-link href="/ecommerce/product-details" class="bg-light rounded p-1">
+                          <!-- <b-link href="/ecommerce/product-details" class="bg-light rounded p-1">
                             <img src="@/assets/images/products/img-8.png" alt="" class="img-fluid d-block" />
                           </b-link>
                           <b-link href="/ecommerce/product-details" class="bg-light rounded p-1">
@@ -2215,7 +2215,7 @@ export default {
                           </b-link>
                           <b-link href="/ecommerce/product-details" class="bg-light rounded p-1">
                             <img src="@/assets/images/products/img-10.png" alt="" class="img-fluid d-block" />
-                          </b-link>
+                          </b-link> -->
                         </div>
                         <p class="mb-0 text-muted"><small>9:47 PM Yesterday</small>
                         </p>
@@ -2241,9 +2241,9 @@ export default {
                         </div>
                       </div>
                       <div class="flex-grow-1 ms-3">
-                        <h6 class="mb-1">Today offers by <b-link href="/ecommerce/seller-details"
+                        <!-- <h6 class="mb-1">Today offers by <b-link href="/ecommerce/seller-details"
                             class="link-secondary">Digitech Galaxy</b-link>
-                        </h6>
+                        </h6> -->
                         <p class="text-muted mb-2">Offer is valid on orders of Rs.500 Or above for selected products
                           only.</p>
                         <small class="mb-0 text-muted">12 Dec, 2021</small>

@@ -1,5 +1,4 @@
 import store from "@/state/store";
-
 export default [
   {
     path: "/login",
@@ -57,8 +56,7 @@ export default [
   },
 
   // User
-  
-  {
+    {
     path: "/",
     name: "crypto default",
     meta: {
@@ -268,59 +266,6 @@ export default [
     component: () => import("../views/dashboard/crypto/index"),
   },
   {
-    //can not used in site
-     //but used in horizontal and two column
-    path: "/dashboard/projects",
-    name: "dashboard-projects",
-    meta: {
-      title: "Projects", authRequired: true,
-    },
-    component: () => import("../views/dashboard/projects/index"),
-  },
-  {
-    //can not used in main menu site
-   //but used in horizontal and two column
-
-    path: "/dashboard/crm",
-    name: "dashboard-crm",
-    meta: {
-      title: "CRM", authRequired: true,
-    },
-    component: () => import("../views/dashboard/crm/index"),
-  },
-  {
-    //can not used in main menu site
-  //but used in horizontal and two column
-
-    path: "/dashboard/analytics",
-    name: "dashboard-analytics",
-    meta: {
-      title: "Analytics", authRequired: true,
-    },
-    component: () => import("../views/dashboard/analytics/index"),
-  },
-  {
-     //can not used in main menu site
-  //but used in horizontal and two column
-    path: "/dashboard/nft",
-    name: "dashboard-nft",
-    meta: {
-      title: "NFT Dashboard", authRequired: true,
-    },
-    component: () => import("../views/dashboard/nft/index"),
-  },
-  {
-      //can not used in main menu site
-  //but used in horizontal and two column
-
-    path: "/dashboard/job",
-    name: "dashboard-job",
-    meta: {
-      title: "Job Dashboard", authRequired: true,
-    },
-    component: () => import("../views/dashboard/job/index"),
-  },
-  {
     path: "/logout",
     name: "logout",
     meta: {
@@ -334,16 +279,12 @@ export default [
     component: () => import("../views/auth/logout/basic")
   },
   {
-
-    //used in multiple places
-
     path: "/calendar",
     name: "calendar",
     meta: { title: "Calendar", authRequired: true },
     component: () => import("../views/calendar/index"),
   },
   {
-     //used in multiple places
     path: "/chat",
     name: "chat",
     meta: { title: "Chat", authRequired: true },
@@ -362,208 +303,10 @@ export default [
     component: () => import("../views/apps/todo"),
   },
   {
-    path: "/mailbox",
-    name: "mailbox",
-    meta: { title: "Mailbox", authRequired: true },
-    component: () => import("../views/apps/email/mailbox"),
-  },
-  {
-    path: "/email/email-basic",
-    name: "email-basic",
-    meta: { title: "Basic Action", authRequired: true },
-    component: () => import("../views/apps/email/email-basic"),
-  },
-  {
-    path: "/email/email-ecommerce",
-    name: "email-ecommerce",
-    meta: { title: "Ecommerce Action", authRequired: true },
-    component: () => import("../views/apps/email/email-ecommerce"),
-  },
-  {
-    path: "/apps/nft-auction",
-    name: "auction",
-    meta: { title: "Live Auction", authRequired: true },
-    component: () => import("../views/apps/nft/nft-auction"),
-  },
-  {
-    path: "/apps/nft-collection",
-    name: "collection",
-    meta: { title: "Collactions", authRequired: true },
-    component: () => import("../views/apps/nft/nft-collection"),
-  },
-  {
-    path: "/apps/nft-create",
-    name: "create",
-    meta: { title: "Create", authRequired: true },
-    component: () => import("../views/apps/nft/nft-create"),
-  },
-  {
-    path: "/apps/nft-creators",
-    name: "creators",
-    meta: { title: "Creators", authRequired: true },
-    component: () => import("../views/apps/nft/nft-creators"),
-  },
-  {
-    path: "/apps/nft-explore",
-    name: "explore",
-    meta: { title: "Explore Now", authRequired: true },
-    component: () => import("../views/apps/nft/nft-explore"),
-  },
-  {
-    path: "/apps/nft-item-detail",
-    name: "item-detail",
-    meta: { title: "Item Detail", authRequired: true },
-    component: () => import("../views/apps/nft/nft-item-detail"),
-  },
-  {
-    path: "/apps/nft-marketplace",
-    name: "marketplace",
-    meta: { title: "Marketplace", authRequired: true },
-    component: () => import("../views/apps/nft/nft-marketplace"),
-  },
-  {
-    path: "/apps/nft-ranking",
-    name: "ranking",
-    meta: { title: "Ranking", authRequired: true },
-    component: () => import("../views/apps/nft/nft-ranking"),
-  },
-  {
-    path: "/apps/nft-wallet",
-    name: "nft-wallet",
-    meta: { title: "Wallet", authRequired: true },
-    component: () => import("../views/apps/nft/nft-wallet"),
-  },
-  {
-    path: "/apps/projects-list",
-    name: "projects-list",
-    meta: { title: "Projects List", authRequired: true },
-    component: () => import("../views/apps/projects/list"),
-  },
-  {
-    path: "/apps/projects-overview",
-    name: "projects Overview",
-    meta: { title: "Projects Overview", authRequired: true },
-    component: () => import("../views/apps/projects/overview"),
-  },
-  {
-    path: "/apps/projects-create",
-    name: "projects-create",
-    meta: { title: "Projects Create", authRequired: true },
-    component: () => import("../views/apps/projects/create"),
-  },
-  {
-    path: "/apps/tasks-details",
-    name: "tasks-details",
-    meta: { title: "Tasks Details", authRequired: true },
-    component: () => import("../views/apps/tasks/details"),
-  },
-  {
-    path: "/apps/tasks-kanban",
-    name: "tasks-kanban",
-    meta: { title: "Tasks Kanban", authRequired: true },
-    component: () => import("../views/apps/tasks/kanban"),
-  },
-  {
-    path: "/apps/tasks-list-view",
-    name: "tasks-list-view",
-    meta: { title: "Taks List", authRequired: true },
-    component: () => import("../views/apps/tasks/list-view"),
-  },
-  {
-    path: "/apps/tickets-details",
-    name: "tickets-details",
-    meta: { title: "Ticket Details", authRequired: true },
-    component: () => import("../views/tickets/details"),
-  },
-  {
-    path: "/apps/tickets-list",
-    name: "tickets-list",
-    meta: { title: "Tickets List", authRequired: true },
-    component: () => import("../views/tickets/list"),
-  },
-  {
-    path: "/apps/crm-contacts",
-    name: "crm-contacts",
-    meta: { title: "CRM Contacts", authRequired: true },
-    component: () => import("../views/apps/crm/contacts"),
-  },
-  {
-    path: "/apps/crm-companies",
-    name: "crm-companies",
-    meta: { title: "CRM companies", authRequired: true },
-    component: () => import("../views/apps/crm/companies"),
-  },
-  {
-    path: "/apps/crm-deals",
-    name: "crm-deals",
-    meta: { title: "CRM Deals", authRequired: true },
-    component: () => import("../views/apps/crm/deals"),
-  },
-  {
     path: "/apps/crm-leads",
     name: "crm-leads",
     meta: { title: "CRM Leads", authRequired: true },
     component: () => import("../views/apps/crm/leads"),
-  },
-  {
-    path: "/ecommerce/customers",
-    name: "customers",
-    meta: { title: "Customers", authRequired: true },
-    component: () => import("../views/apps/ecommerce/customers"),
-  },
-  {
-    path: "/ecommerce/products",
-    name: "products",
-    meta: { title: "Products", authRequired: true },
-    component: () => import("../views/apps/ecommerce/products"),
-  },
-  {
-    path: "/ecommerce/product-details",
-    name: "product-detail",
-    meta: { title: "Product Details", authRequired: true },
-    component: () => import("../views/apps/ecommerce/product-details"),
-  },
-  {
-    path: "/ecommerce/orders",
-    name: "orders",
-    meta: { title: "Orders", authRequired: true },
-    component: () => import("../views/apps/ecommerce/orders"),
-  },
-  {
-    path: "/ecommerce/order-details",
-    name: "order-details",
-    meta: { title: "Order Details", authRequired: true },
-    component: () => import("../views/apps/ecommerce/order-details"),
-  },
-  {
-    path: "/ecommerce/add-product",
-    name: "add-product",
-    meta: { title: "Create Product", authRequired: true },
-    component: () => import("../views/apps/ecommerce/add-product"),
-  },
-  {
-    path: "/ecommerce/shopping-cart",
-    name: "shopping cart",
-    meta: { title: "Shopping Cart", authRequired: true },
-    component: () => import("../views/apps/ecommerce/shopping-cart"),
-  },
-  {
-    path: "/ecommerce/checkout",
-    name: "checkout",
-    meta: { title: "Check Out", authRequired: true },
-    component: () => import("../views/apps/ecommerce/checkout"),
-  },
-  {
-    path: "/ecommerce/sellers",
-    name: "sellers",
-    meta: { title: "Sellers", authRequired: true },
-    component: () => import("../views/apps/ecommerce/sellers"),
-  },
-  {
-    path: "/ecommerce/seller-details",
-    name: "seller-details",
-    meta: { title: "Seller Details", authRequired: true },
-    component: () => import("../views/apps/ecommerce/seller-details"),
   },
   {
     path: "/crypto/buy-sell",
@@ -607,137 +350,137 @@ export default [
     meta: { title: "Invoice Details", authRequired: true },
     component: () => import("../views/apps/invoices/details"),
   },
-  {
-    path: "/invoices/list",
-    name: "invoice-list",
-    meta: { title: "Invoice List", authRequired: true },
-    component: () => import("../views/apps/invoices/list"),
-  },
-  {
-    path: "/invoices/create",
-    name: "invoice-create",
-    meta: { title: "Create Invoice", authRequired: true },
-    component: () => import("../views/apps/invoices/create"),
-  },
-  {
-    path: "/jobs/application",
-    name: "job-application",
-    meta: { title: "Job Application", authRequired: true },
-    component: () => import("../views/apps/jobs/application"),
-  },
-  {
-    path: "/jobs/candidate-grid",
-    name: "job-candidate-grid",
-    meta: { title: "Candidate Grid", authRequired: true },
-    component: () => import("../views/apps/jobs/candidate-grid"),
-  },
-  {
-    path: "/jobs/candidate-lists",
-    name: "job-candidate-lists",
-    meta: { title: "Candidate Lists", authRequired: true },
-    component: () => import("../views/apps/jobs/candidate-lists"),
-  },
-  {
-    path: "/jobs/categories",
-    name: "job-categories",
-    meta: { title: "Job Categories", authRequired: true },
-    component: () => import("../views/apps/jobs/categories"),
-  },
-  {
-    path: "/jobs/companies-list",
-    name: "job-companies-list",
-    meta: { title: "Companies List", authRequired: true },
-    component: () => import("../views/apps/jobs/companies-list"),
-  },
-  {
-    path: "/jobs/details",
-    name: "job-details",
-    meta: { title: "Job Details", authRequired: true },
-    component: () => import("../views/apps/jobs/details"),
-  },
-  {
-    path: "/jobs/grid-lists",
-    name: "job-grid-lists",
-    meta: { title: "Grid Lists", authRequired: true },
-    component: () => import("../views/apps/jobs/grid-lists"),
-  },
-  {
-    path: "/jobs/lists",
-    name: "job-lists",
-    meta: { title: "Job Lists", authRequired: true },
-    component: () => import("../views/apps/jobs/lists"),
-  },
-  {
-    path: "/jobs/new",
-    name: "job-new",
-    meta: { title: "New Job", authRequired: true },
-    component: () => import("../views/apps/jobs/new"),
-  },
-  {
-    path: "/jobs/statistics",
-    name: "job-statistics",
-    meta: { title: "Job Statistics", authRequired: true },
-    component: () => import("../views/apps/jobs/statistics"),
-  },
-  {
-    path: "/apps-api-key",
-    name: "API Key",
-    meta: { title: "API Key", authRequired: true },
-    component: () => import("../views/apps/apikey"),
-  },
+  // {
+  //   path: "/invoices/list",
+  //   name: "invoice-list",
+  //   meta: { title: "Invoice List", authRequired: true },
+  //   component: () => import("../views/apps/invoices/list"),
+  // },
+  // {
+  //   path: "/invoices/create",
+  //   name: "invoice-create",
+  //   meta: { title: "Create Invoice", authRequired: true },
+  //   component: () => import("../views/apps/invoices/create"),
+  // },
+  // {
+  //   path: "/jobs/application",
+  //   name: "job-application",
+  //   meta: { title: "Job Application", authRequired: true },
+  //   component: () => import("../views/apps/jobs/application"),
+  // },
+  // {
+  //   path: "/jobs/candidate-grid",
+  //   name: "job-candidate-grid",
+  //   meta: { title: "Candidate Grid", authRequired: true },
+  //   component: () => import("../views/apps/jobs/candidate-grid"),
+  // },
+  // {
+  //   path: "/jobs/candidate-lists",
+  //   name: "job-candidate-lists",
+  //   meta: { title: "Candidate Lists", authRequired: true },
+  //   component: () => import("../views/apps/jobs/candidate-lists"),
+  // },
+  // {
+  //   path: "/jobs/categories",
+  //   name: "job-categories",
+  //   meta: { title: "Job Categories", authRequired: true },
+  //   component: () => import("../views/apps/jobs/categories"),
+  // },
+  // {
+  //   path: "/jobs/companies-list",
+  //   name: "job-companies-list",
+  //   meta: { title: "Companies List", authRequired: true },
+  //   component: () => import("../views/apps/jobs/companies-list"),
+  // },
+  // {
+  //   path: "/jobs/details",
+  //   name: "job-details",
+  //   meta: { title: "Job Details", authRequired: true },
+  //   component: () => import("../views/apps/jobs/details"),
+  // },
+  // {
+  //   path: "/jobs/grid-lists",
+  //   name: "job-grid-lists",
+  //   meta: { title: "Grid Lists", authRequired: true },
+  //   component: () => import("../views/apps/jobs/grid-lists"),
+  // },
+  // {
+  //   path: "/jobs/lists",
+  //   name: "job-lists",
+  //   meta: { title: "Job Lists", authRequired: true },
+  //   component: () => import("../views/apps/jobs/lists"),
+  // },
+  // {
+  //   path: "/jobs/new",
+  //   name: "job-new",
+  //   meta: { title: "New Job", authRequired: true },
+  //   component: () => import("../views/apps/jobs/new"),
+  // },
+  // {
+  //   path: "/jobs/statistics",
+  //   name: "job-statistics",
+  //   meta: { title: "Job Statistics", authRequired: true },
+  //   component: () => import("../views/apps/jobs/statistics"),
+  // },
+  // {
+  //   path: "/apps-api-key",
+  //   name: "API Key",
+  //   meta: { title: "API Key", authRequired: true },
+  //   component: () => import("../views/apps/apikey"),
+  // },
 
-  {
-    path: "/ui/alerts",
-    name: "Alerts",
-    meta: {
-      title: "Alerts", authRequired: true,
-    },
-    component: () => import("../views/ui/alerts"),
-  },
-  {
-    path: "/ui/buttons",
-    name: "Buttons",
-    meta: {
-      title: "Buttons", authRequired: true,
-    },
-    component: () => import("../views/ui/buttons"),
-  },
-  {
-    path: "/ui/cards",
-    name: "Cards",
-    meta: { title: "Cards", authRequired: true },
-    component: () => import("../views/ui/cards"),
-  },
-  {
-    path: "/ui/carousel",
-    name: "Carousel",
-    meta: { title: "Carousel", authRequired: true },
-    component: () => import("../views/ui/carousel"),
-  },
-  {
-    path: "/ui/dropdowns",
-    name: "Dropdowns",
-    meta: { title: "Dropdowns", authRequired: true },
-    component: () => import("../views/ui/dropdowns"),
-  },
-  {
-    path: "/ui/grid",
-    name: "Grid",
-    meta: { title: "Grid", authRequired: true },
-    component: () => import("../views/ui/grid"),
-  },
-  {
-    path: "/ui/images",
-    name: "Images",
-    meta: { title: "Images", authRequired: true },
-    component: () => import("../views/ui/images"),
-  },
-  {
-    path: "/ui/modals",
-    name: "Modals",
-    meta: { title: "Modals", authRequired: true },
-    component: () => import("../views/ui/modals"),
-  },
+  // {
+  //   path: "/ui/alerts",
+  //   name: "Alerts",
+  //   meta: {
+  //     title: "Alerts", authRequired: true,
+  //   },
+  //   component: () => import("../views/ui/alerts"),
+  // },
+  // {
+  //   path: "/ui/buttons",
+  //   name: "Buttons",
+  //   meta: {
+  //     title: "Buttons", authRequired: true,
+  //   },
+  //   component: () => import("../views/ui/buttons"),
+  // },
+  // {
+  //   path: "/ui/cards",
+  //   name: "Cards",
+  //   meta: { title: "Cards", authRequired: true },
+  //   component: () => import("../views/ui/cards"),
+  // },
+  // {
+  //   path: "/ui/carousel",
+  //   name: "Carousel",
+  //   meta: { title: "Carousel", authRequired: true },
+  //   component: () => import("../views/ui/carousel"),
+  // },
+  // {
+  //   path: "/ui/dropdowns",
+  //   name: "Dropdowns",
+  //   meta: { title: "Dropdowns", authRequired: true },
+  //   component: () => import("../views/ui/dropdowns"),
+  // },
+  // {
+  //   path: "/ui/grid",
+  //   name: "Grid",
+  //   meta: { title: "Grid", authRequired: true },
+  //   component: () => import("../views/ui/grid"),
+  // },
+  // {
+  //   path: "/ui/images",
+  //   name: "Images",
+  //   meta: { title: "Images", authRequired: true },
+  //   component: () => import("../views/ui/images"),
+  // },
+  // {
+  //   path: "/ui/modals",
+  //   name: "Modals",
+  //   meta: { title: "Modals", authRequired: true },
+  //   component: () => import("../views/ui/modals"),
+  // },
   {
     path: "/ui/offcanvas",
     name: "offcanvas",
@@ -1358,58 +1101,58 @@ export default [
     },
     component: () => import('../views/auth/errors/404-cover')
   },
-  {
-    path: '/auth/ofline',
-    name: 'ofline',
-    meta: {
-      title: "Offline", authRequired: true,
-    },
-    component: () => import('../views/auth/errors/ofline')
-  },
-  {
-    path: '/auth/logout-basic',
-    name: 'logout-basic',
-    meta: {
-      title: "Logout", authRequired: true,
-    },
-    component: () => import('../views/auth/logout/basic')
-  },
-  {
-    path: '/auth/logout-cover',
-    name: 'logout-cover',
-    meta: {
-      title: "Logout", authRequired: true,
-    },
-    component: () => import('../views/auth/logout/cover')
-  },
-  {
-    path: '/auth/success-msg-basic',
-    name: 'success-msg-basic',
-    meta: {
-      title: "Success Message", authRequired: true,
-    },
-    component: () => import('../views/auth/success-msg/basic')
-  },
-  {
-    path: '/auth/success-msg-cover',
-    name: 'success-msg-cover',
-    meta: {
-      title: "Success Message", authRequired: true,
-    },
-    component: () => import('../views/auth/success-msg/cover')
-  },
-  {
-    path: "/maps/google",
-    name: "Google Maps",
-    meta: {
-      title: "Google Maps", authRequired: true,
-    },
-    component: () => import("../views/maps/google"),
-  },
-  {
-    path: "/maps/leaflet",
-    name: "Leaflet Maps",
-    meta: { title: "Leaflet Maps", authRequired: true },
-    component: () => import("../views/maps/leaflet/index"),
-  },
+  // {
+  //   path: '/auth/ofline',
+  //   name: 'ofline',
+  //   meta: {
+  //     title: "Offline", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/errors/ofline')
+  // },
+  // {
+  //   path: '/auth/logout-basic',
+  //   name: 'logout-basic',
+  //   meta: {
+  //     title: "Logout", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/logout/basic')
+  // },
+  // {
+  //   path: '/auth/logout-cover',
+  //   name: 'logout-cover',
+  //   meta: {
+  //     title: "Logout", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/logout/cover')
+  // },
+  // {
+  //   path: '/auth/success-msg-basic',
+  //   name: 'success-msg-basic',
+  //   meta: {
+  //     title: "Success Message", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/success-msg/basic')
+  // },
+  // {
+  //   path: '/auth/success-msg-cover',
+  //   name: 'success-msg-cover',
+  //   meta: {
+  //     title: "Success Message", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/success-msg/cover')
+  // },
+  // {
+  //   path: "/maps/google",
+  //   name: "Google Maps",
+  //   meta: {
+  //     title: "Google Maps", authRequired: true,
+  //   },
+  //   component: () => import("../views/maps/google"),
+  // },
+  // {
+  //   path: "/maps/leaflet",
+  //   name: "Leaflet Maps",
+  //   meta: { title: "Leaflet Maps", authRequired: true },
+  //   component: () => import("../views/maps/leaflet/index"),
+  // },
 ];

@@ -1472,12 +1472,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-10.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Henry Baird</b-link>
@@ -1492,12 +1492,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-3.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Frank Hook</b-link>
@@ -1512,12 +1512,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-8.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Donald Palmer</b-link>
@@ -1534,12 +1534,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-5.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Erica Kernan</b-link>
@@ -1554,12 +1554,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-4.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Alexis Clarke</b-link>
@@ -1574,12 +1574,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-6.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Marie Ward</b-link>
@@ -1595,12 +1595,12 @@ export default {
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
                                     <img src="@/assets/images/users/avatar-7.jpg" alt=""
                                         class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
+                                    <!-- <b-link href="/mailbox"
                                         class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
-                                    </b-link>
+                                    </b-link> -->
                                 </div>
                                 <h5 class="mb-1">
                                     <b-link href="/pages/profile" class="text-body">Jack Gough</b-link>
@@ -1753,9 +1753,9 @@ export default {
                                         <li>
                                             <router-link to="">Gallery</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/apps/projects-list">Projects</router-link>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <router-link to="/pages/timeline">Timeline</router-link>
                                         </li>
@@ -1769,18 +1769,18 @@ export default {
                                         <li>
                                             <router-link to="/calendar">Calendar</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/mailbox">Mailbox</router-link>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <router-link to="/chat">Chat</router-link>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <router-link to="/apps/crm-deals">Deals</router-link>
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <router-link to="/apps/tasks-kanban">kanban board</router-link>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </b-col>

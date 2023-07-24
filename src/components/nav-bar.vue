@@ -994,10 +994,10 @@ export default {
                 <i class=" mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>
                 <span class="align-middle">Messages</span>
               </router-link>
-              <router-link class="dropdown-item" to="/apps/tasks-kanban">
+              <!-- <router-link class="dropdown-item" to="/apps/tasks-kanban">
                 <i class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i>
                 <span class="align-middle">Taskboard</span>
-              </router-link>
+              </router-link> -->
               
               <router-link class="dropdown-item" to="/my-wallet">
                 <i class="mdi mdi-credit-card-multiple text-muted fs-16 align-middle me-1"></i>

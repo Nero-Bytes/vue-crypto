@@ -360,10 +360,10 @@ export default {
                                 <img src="@/assets/images/products/img-1.png" alt="" class="img-fluid d-block" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1">
+                                <!-- <h5 class="fs-14 my-1">
                                   <router-link to="/ecommerce/product-details" class="text-reset">Branded T-Shirts
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">24 Apr 2021</span>
                               </div>
                             </div>
@@ -392,10 +392,10 @@ export default {
                                 <img src="@/assets/images/products/img-2.png" alt="" class="img-fluid d-block" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1">
+                                <!-- <h5 class="fs-14 my-1">
                                   <router-link to="/ecommerce/product-details" class="text-reset">Bentwood Chair
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">19 Mar 2021</span>
                               </div>
                             </div>
@@ -426,10 +426,10 @@ export default {
                                 <img src="@/assets/images/products/img-3.png" alt="" class="img-fluid d-block" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1">
+                                <!-- <h5 class="fs-14 my-1">
                                   <router-link to="/ecommerce/product-details" class="text-reset">Borosil Paper Cup
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">01 Mar 2021</span>
                               </div>
                             </div>
@@ -458,10 +458,10 @@ export default {
                                 <img src="@/assets/images/products/img-4.png" alt="" class="img-fluid d-block" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1">
+                                <!-- <h5 class="fs-14 my-1">
                                   <router-link to="/ecommerce/product-details" class="text-reset">One Seater Sofa
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">11 Feb 2021</span>
                               </div>
                             </div>
@@ -492,10 +492,10 @@ export default {
                                 <img src="@/assets/images/products/img-5.png" alt="" class="img-fluid d-block" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1">
+                                <!-- <h5 class="fs-14 my-1">
                                   <router-link to="/ecommerce/product-details" class="text-reset">Stillbird Helmet
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">17 Jan 2021</span>
                               </div>
                             </div>
@@ -582,10 +582,10 @@ export default {
                                 <img src="@/assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
                               </div>
                               <div>
-                                <h5 class="fs-14 my-1 fw-medium">
+                                <!-- <h5 class="fs-14 my-1 fw-medium">
                                   <router-link to="/ecommerce/seller-details" class="text-reset">iTest Factory
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">Oliver Tyler</span>
                               </div>
                             </div>
@@ -613,10 +613,10 @@ export default {
                                 <img src="@/assets/images/companies/img-2.png" alt="" class="avatar-sm p-2" />
                               </div>
                               <div class="flex-grow-1">
-                                <h5 class="fs-14 my-1 fw-medium">
+                                <!-- <h5 class="fs-14 my-1 fw-medium">
                                   <router-link to="/ecommerce/seller-details" class="text-reset">Digitech Galaxy
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">John Roberts</span>
                               </div>
                             </div>
@@ -644,10 +644,10 @@ export default {
                                 <img src="@/assets/images/companies/img-3.png" alt="" class="avatar-sm p-2" />
                               </div>
                               <div class="flex-gow-1">
-                                <h5 class="fs-14 my-1 fw-medium">
+                                <!-- <h5 class="fs-14 my-1 fw-medium">
                                   <router-link to="/ecommerce/seller-details" class="text-reset">Nesta Technologies
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">Harley Fuller</span>
                               </div>
                             </div>
@@ -675,10 +675,10 @@ export default {
                                 <img src="@/assets/images/companies/img-8.png" alt="" class="avatar-sm p-2" />
                               </div>
                               <div class="flex-grow-1">
-                                <h5 class="fs-14 my-1 fw-medium">
+                                <!-- <h5 class="fs-14 my-1 fw-medium">
                                   <router-link to="/ecommerce/seller-details" class="text-reset">Zoetic Fashion
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">James Bowen</span>
                               </div>
                             </div>
@@ -706,10 +706,10 @@ export default {
                                 <img src="@/assets/images/companies/img-5.png" alt="" class="avatar-sm p-2" />
                               </div>
                               <div class="flex-grow-1">
-                                <h5 class="fs-14 my-1 fw-medium">
+                                <!-- <h5 class="fs-14 my-1 fw-medium">
                                   <router-link to="/ecommerce/seller-details" class="text-reset">Meta4Systems
                                   </router-link>
-                                </h5>
+                                </h5> -->
                                 <span class="text-muted">Zoe Dennis</span>
                               </div>
                             </div>
@@ -820,10 +820,10 @@ export default {
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
+                          <!-- <td>
                             <router-link to="/ecommerce/order-details" class="fw-medium link-primary">#VZ2112
                             </router-link>
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0 me-2">
@@ -847,10 +847,10 @@ export default {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <!-- <td>
                             <router-link to="/ecommerce/order-details" class="fw-medium link-primary">#VZ2111
                             </router-link>
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0 me-2">
@@ -874,10 +874,10 @@ export default {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <!-- <td>
                             <router-link to="/ecommerce/order-details" class="fw-medium link-primary">#VZ2109
                             </router-link>
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0 me-2">
@@ -901,10 +901,10 @@ export default {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <!-- <td>
                             <router-link to="/ecommerce/order-details" class="fw-medium link-primary">#VZ2108
                             </router-link>
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0 me-2">
@@ -928,10 +928,10 @@ export default {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <!-- <td>
                             <router-link to="/ecommerce/order-details" class="fw-medium link-primary">#VZ2107
                             </router-link>
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
                               <div class="flex-shrink-0 me-2">
@@ -1003,7 +1003,7 @@ export default {
                       </h6>
                       <p class="text-muted mb-1">By Nesta Technologies</p>
                       <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2">
-                        <b-link to="/ecommerce/product-details" class="bg-light rounded p-1">
+                        <!-- <b-link to="/ecommerce/product-details" class="bg-light rounded p-1">
                           <img src="@/assets/images/products/img-8.png" alt="" class="img-fluid d-block" />
                         </b-link>
                         <b-link to="/ecommerce/product-details" class="bg-light rounded p-1">
@@ -1011,7 +1011,7 @@ export default {
                         </b-link>
                         <b-link to="/ecommerce/product-details" class="bg-light rounded p-1">
                           <img src="@/assets/images/products/img-10.png" alt="" class="img-fluid d-block" />
-                        </b-link>
+                        </b-link> -->
                       </div>
                       <p class="mb-0 text-muted">
                         <small>9:47 PM Yesterday</small>
@@ -1042,10 +1042,10 @@ export default {
                       </div>
                     </div>
                     <div class="flex-grow-1 ms-3">
-                      <h6 class="mb-1 lh-base">
+                      <!-- <h6 class="mb-1 lh-base">
                         Today offers by
                         <router-link to="/ecommerce/seller-details" class="link-secondary">Digitech Galaxy</router-link>
-                      </h6>
+                      </h6> -->
                       <p class="text-muted mb-2">
                         Offer is valid on orders of Rs.500 Or above for selected
                         products only.

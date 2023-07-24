@@ -529,8 +529,8 @@ export default {
                   <b-button variant="primary" class="me-1" id="remove-actions" @click="deleteMultiple">
                     <i class="ri-delete-bin-2-line"></i>
                   </b-button>
-                  <router-link to="/invoices/create" class="btn btn-danger"><i class="ri-add-line align-bottom me-1"></i>
-                    Create Invoice</router-link>
+                  <!-- <router-link to="/invoices/create" class="btn btn-danger"><i class="ri-add-line align-bottom me-1"></i>
+                    Create Invoice</router-link> -->
                 </div>
               </div>
             </div>

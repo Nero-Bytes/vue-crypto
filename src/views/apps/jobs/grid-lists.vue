@@ -368,7 +368,7 @@ export default {
             </div>
             <div class="mt-4 hstack gap-2">
               <b-link href="#!" class="btn btn-soft-primary w-100">Apply Job</b-link>
-              <b-link href="/jobs/details" class="btn btn-soft-success w-100">Overview</b-link>
+              <!-- <b-link href="/jobs/details" class="btn btn-soft-success w-100">Overview</b-link> -->
             </div>
           </b-card-body>
         </b-card>
