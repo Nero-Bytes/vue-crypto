@@ -933,18 +933,18 @@ export default {
                           <router-link to="/ui/alerts" class="nav-link" data-key="t-alerts">{{ $t("t-alerts") }}
                           </router-link>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/badges" class="nav-link" data-key="t-badges">{{ $t("t-badges") }}
                           </router-link>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item">
                           <router-link to="/ui/buttons" class="nav-link" data-key="t-buttons">{{ $t("t-buttons") }}
                           </router-link>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/colors" class="nav-link" data-key="t-colors">{{ $t("t-colors") }}
                           </router-link>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item">
                           <router-link to="/ui/cards" class="nav-link" data-key="t-cards">{{ $t("t-cards") }}
                           </router-link>
@@ -991,10 +991,10 @@ export default {
                           <router-link to="/ui/progress" class="nav-link" data-key="t-progress">{{ $t("t-progress") }}
                           </router-link>
                         </li> -->
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/notifications" class="nav-link" data-key="t-notifications">
                             {{ $t("t-notifications") }}</router-link>
-                        </li>
+                        </li> -->
                       </ul>
                     </b-col>
                     <b-col lg="4">
@@ -1003,30 +1003,30 @@ export default {
                           <router-link to="/ui/media" class="nav-link" data-key="t-media-object">
                             {{ $t("t-media-object") }}</router-link>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/embed-video" class="nav-link" data-key="t-embed-video">
                             {{ $t("t-embed-video") }}</router-link>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/typography" class="nav-link" data-key="t-typography">
                             {{ $t("t-typography") }}</router-link>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/lists" class="nav-link" data-key="t-lists">{{ $t("t-lists") }}
                           </router-link>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/general" class="nav-link" data-key="t-general">{{ $t("t-general") }}
                           </router-link>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/ribbons" class="nav-link" data-key="t-ribbons">{{ $t("t-ribbons") }}
                           </router-link>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/utilities" class="nav-link" data-key="t-utilities">
                             {{ $t("t-utilities") }}</router-link>
-                        </li>
+                        </li> -->
                       </ul>
                     </b-col>
                   </b-row>
