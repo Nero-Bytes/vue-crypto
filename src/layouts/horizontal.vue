@@ -999,10 +999,10 @@ export default {
                     </b-col>
                     <b-col lg="4">
                       <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <router-link to="/ui/media" class="nav-link" data-key="t-media-object">
                             {{ $t("t-media-object") }}</router-link>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item">
                           <router-link to="/ui/embed-video" class="nav-link" data-key="t-embed-video">
                             {{ $t("t-embed-video") }}</router-link>
@@ -1158,10 +1158,10 @@ export default {
                       </b-link>
                       <div class="collapse menu-dropdown" id="sidebarTables">
                         <ul class="nav nav-sm flex-column">
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                             <router-link to="/tables/basic" class="nav-link" data-key="t-basic-tables">
                               {{ $t("t-basic-tables") }}</router-link>
-                          </li>
+                          </li> -->
                           <li class="nav-item">
                             <router-link to="/tables/gridjs" class="nav-link" data-key="t-grid-js">{{ $t("t-grid-js") }}
                             </router-link>
@@ -1285,31 +1285,31 @@ export default {
                       </b-link>
                       <div class="collapse menu-dropdown" id="sidebarIcons">
                         <ul class="nav nav-sm flex-column">
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/remix" class="nav-link" data-key="t-remix">{{ $t("t-remix") }}
                             </router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/boxicons" class="nav-link" data-key="t-boxicons">
                               {{ $t("t-boxicons") }}</router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/materialdesign" class="nav-link" data-key="t-material-design">
                               {{ $t("t-material-design") }}</router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/lineawesome" class="nav-link" data-key="t-line-awesome">
                               {{ $t("t-line-awesome") }}</router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/feather" class="nav-link" data-key="t-feather">{{ $t("t-feather") }}
                             </router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/icons/crypto" class="nav-link" data-key="t-feather">{{ $t("t-crypto-svg")
 }}
                             </router-link>
-                          </li>
+                          </li> -->
                         </ul>
                       </div>
                     </li>
