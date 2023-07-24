@@ -42,7 +42,7 @@ export default {
         {
           id: 1,
           icon: "ri-money-dollar-circle-fill",
-          label: "Total Invested",
+          label: "Total Fund From Broker",
           counter: "2390.68",
           badge: "ri-arrow-up-s-fill",
           badgeColor: "success",
@@ -51,7 +51,7 @@ export default {
         {
           id: 2,
           icon: "ri-arrow-up-circle-fill",
-          label: "Total Change",
+          label: "Profit From Broker",
           counter: "19523.25",
           badge: "ri-arrow-up-s-fill",
           badgeColor: "success",
@@ -60,7 +60,7 @@ export default {
         {
           id: 3,
           icon: "ri-arrow-down-circle-fill",
-          label: "Day Change",
+          label: "Broker Login",
           counter: "14799.44",
           badge: "ri-arrow-down-s-fill",
           badgeColor: "danger",

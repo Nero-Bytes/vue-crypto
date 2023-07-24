@@ -191,15 +191,7 @@ export default {
                      <i class="ri-delete-bin-line"></i> 
                    </button>
             
-                   <!-- Button for editing data -->
-                   <button class="btn btn-outline-warning" >
-                     <i class="ri-edit-line"></i> Edit
-                   </button>
-            
-                   <!-- Button for adding data -->
-                   <button class="btn btn-outline-success m-1" >
-                     <i class="ri-add-line"></i> Add
-                   </button>
+                 
              </div>
            </div>
            <h6 class="text-muted mb-0">
@@ -219,6 +211,18 @@ export default {
              </h6>
            </div>
          </b-card-body>
+         <div class='d-flex align-items-center justify-content-between '>
+            
+                   <!-- Button for editing data -->
+                   <button class="btn btn-outline-warning" >
+                     <i class="ri-edit-line"></i> Edit
+                   </button>
+            
+                   <!-- Button for adding data -->
+                   <button class="btn btn-outline-success m-1" >
+                     <i class="ri-add-line"></i> Add
+                   </button>
+             </div>
        </b-card>
        
         <b-card no-body class="mb-2">
