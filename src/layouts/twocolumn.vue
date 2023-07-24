@@ -1172,30 +1172,30 @@ export default {
                             <router-link to="/ui/images" class="nav-link" data-key="t-images">{{ $t("t-images") }}
                             </router-link>
                           </li> -->
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                             <router-link to="/ui/tabs" class="nav-link" data-key="t-tabs">{{ $t("t-tabs") }}
                             </router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/ui/accordions" class="nav-link" data-key="t-accordion-collapse">
                               {{ $t("t-accordion-collapse") }}</router-link>
-                          </li>
+                          </li> -->
                           <!-- <li class="nav-item">
                             <router-link to="/ui/modals" class="nav-link" data-key="t-modals">{{ $t("t-modals") }}
                             </router-link>
                           </li> -->
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                             <router-link to="/ui/offcanvas" class="nav-link" data-key="t-offcanvas">
                               {{ $t("t-offcanvas") }}</router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/ui/placeholders" class="nav-link" data-key="t-placeholders">
                               {{ $t("t-placeholders") }}</router-link>
-                          </li>
-                          <li class="nav-item">
+                          </li> -->
+                          <!-- <li class="nav-item">
                             <router-link to="/ui/progress" class="nav-link" data-key="t-progress">{{ $t("t-progress") }}
                             </router-link>
-                          </li>
+                          </li> -->
                           <li class="nav-item">
                             <router-link to="/ui/notifications" class="nav-link" data-key="t-notifications">
                               {{ $t("t-notifications") }}</router-link>
