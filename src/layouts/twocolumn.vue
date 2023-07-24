@@ -614,11 +614,11 @@ export default {
                                 {{ $t("t-list-view") }}
                               </router-link>
                             </li> -->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                               <router-link to="/invoices/detail" class="nav-link" data-key="t-details">
                                 {{ $t("t-details") }}
                               </router-link>
-                            </li>
+                            </li> -->
                             <!-- <li class="nav-item">
                               <router-link to="/invoices/create" class="nav-link" data-key="t-create-invoice">
                                 {{ $t("t-create-invoice") }}
@@ -1054,11 +1054,11 @@ export default {
                           {{ $t("t-faqs") }}
                         </router-link>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <router-link to="/pages/pricing" class="nav-link" data-key="t-pricing">
                           {{ $t("t-pricing") }}
                         </router-link>
-                      </li>
+                      </li> -->
 
                       <li class="nav-item">
                         <router-link to="/pages/maintenance" class="nav-link" data-key="t-maintenance">
