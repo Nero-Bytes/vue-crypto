@@ -212,10 +212,17 @@ export default {
     };
   },
   computed: {
+       sortTransactions() {
+       // Create a copy of transactions array before sorting
+      const sortedArray = [...this.transactions];
+      // Sort the copied array by date in descending order
+      const sortedData=sortedArray.sort((a, b) => new Date(b.date) - new Date(a.date));
+      return sortedData;
+     
+    },
 
-    
     displayedPosts() {
-      return this.paginate(this.transactions);
+      return this.paginate(this.sortTransactions);
     },
     resultQuery() {
       if (this.searchQuery) {
@@ -252,6 +259,7 @@ export default {
     },
   },
   methods: {
+
     setPages() {
       let numberOfPages = Math.ceil(this.transactions.length / this.perPage);
       for (let index = 1; index <= numberOfPages; index++) {
@@ -470,7 +478,7 @@ export default {
               </tr>
             </thead>
             <tbody class="list form-check-all">
-              <tr v-for="(data, index) of resultQuery" :key="index">
+              <tr v-for="(data, index) of resultQuery"  :key="index">
                 <td class="id" style="display: none">
                   <b-link href="javascript:void(0);" class="fw-medium link-primary">#VZ001</b-link>
                 </td>
