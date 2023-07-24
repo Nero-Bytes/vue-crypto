@@ -188,8 +188,8 @@ export default {
                             <div class="d-flex gap-2 justify-content-center mt-4">
                                 <b-link href="/auth/signin-basic" class="btn btn-primary">Get Started <i
                                         class="ri-arrow-right-line align-middle ms-1"></i></b-link>
-                                <router-link to="/pages/pricing" class="btn btn-danger">View Plans <i
-                                        class="ri-eye-line align-middle ms-1"></i></router-link>
+                                <!-- <router-link to="/pages/pricing" class="btn btn-danger">View Plans <i
+                                        class="ri-eye-line align-middle ms-1"></i></router-link> -->
                             </div>
                         </div>
 
@@ -1612,10 +1612,10 @@ export default {
                 </b-row>
                 <b-row>
                     <b-col lg="12">
-                        <div class="text-center mt-2">
+                        <!-- <div class="text-center mt-2">
                             <b-link href="/pages/team" class="btn btn-primary">View All Members <i
                                     class="ri-arrow-right-line ms-1 align-bottom"></i></b-link>
-                        </div>
+                        </div> -->
                     </b-col>
                 </b-row>
             </b-container>

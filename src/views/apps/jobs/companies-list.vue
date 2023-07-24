@@ -578,9 +578,9 @@ export default {
                 <h6 class="fs-16">Free trial</h6>
                 <p class="text-muted mb-0">28 days left</p>
               </div>
-              <div>
+              <!-- <div>
                 <b-link href="/pages/pricing" class="btn btn-danger">Upgrade</b-link>
-              </div>
+              </div> -->
             </div>
           </b-card-body>
           <b-card-body class="bg-soft-danger border-top border-danger border-opacity-25 border-top-dashed">

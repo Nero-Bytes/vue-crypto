@@ -619,108 +619,108 @@ export default [
   //   meta: { title: "Basic Table", authRequired: true },
   //   component: () => import("../views/tables/basic"),
   // },
-  {
-    path: "/tables/gridjs",
-    name: "gridjs",
-    meta: { title: "Grid JS", authRequired: true },
-    component: () => import("../views/tables/grid/index"),
-  },
-  {
-    path: "/form/advanced",
-    name: "form-advanced",
-    meta: { title: "Form Advance", authRequired: true },
-    component: () => import("../views/forms/advanced"),
-  },
-  {
-    path: "/form/elements",
-    name: "form-elements",
-    meta: { title: "Form Elements", authRequired: true },
-    component: () => import("../views/forms/elements"),
-  },
-  {
-    path: "/form/layouts",
-    name: "Form Layouts",
-    meta: { title: "Form Layouts", authRequired: true },
-    component: () => import("../views/forms/layouts"),
-  },
-  {
-    path: "/form/editors",
-    name: "Form Editors",
-    meta: { title: "Form Editors", authRequired: true },
-    component: () => import("../views/forms/editors"),
-  },
-  {
-    path: "/form/file-uploads",
-    name: "File Uploads",
-    meta: { title: "File Uploads", authRequired: true },
-    component: () => import("../views/forms/file-uploads"),
-  },
-  {
-    path: "/form/validation",
-    name: "Form Validation",
-    meta: { title: "Form Validation", authRequired: true },
-    component: () => import("../views/forms/validation"),
-  },
-  {
-    path: "/form/wizard",
-    name: "Form Wizard",
-    meta: { title: "Form Wizard", authRequired: true },
-    component: () => import("../views/forms/wizard"),
-  },
-  {
-    path: "/form/masks",
-    name: "form-mask",
-    meta: { title: "Form Mask", authRequired: true },
-    component: () => import("../views/forms/masks"),
-  },
-  {
-    path: "/form/pickers",
-    name: "form-pickers",
-    meta: { title: "Form Picker", authRequired: true },
-    component: () => import("../views/forms/pickers"),
-  },
-  {
-    path: "/form/range-sliders",
-    name: "form-range-slider",
-    meta: { title: "Form Range Slider", authRequired: true },
-    component: () => import("../views/forms/range-sliders"),
-  },
-  {
-    path: "/form/select",
-    name: "form-select",
-    meta: { title: "Form Select", authRequired: true },
-    component: () => import("../views/forms/select"),
-  },
-  {
-    path: "/form/checkboxs-radios",
-    name: "form-checkboxs-radio",
-    meta: { title: "Checkboxs & Radios", authRequired: true },
-    component: () => import("../views/forms/checkboxs-radios"),
-  },
+  // {
+  //   path: "/tables/gridjs",
+  //   name: "gridjs",
+  //   meta: { title: "Grid JS", authRequired: true },
+  //   component: () => import("../views/tables/grid/index"),
+  // },
+  // {
+  //   path: "/form/advanced",
+  //   name: "form-advanced",
+  //   meta: { title: "Form Advance", authRequired: true },
+  //   component: () => import("../views/forms/advanced"),
+  // },
+  // {
+  //   path: "/form/elements",
+  //   name: "form-elements",
+  //   meta: { title: "Form Elements", authRequired: true },
+  //   component: () => import("../views/forms/elements"),
+  // },
+  // {
+  //   path: "/form/layouts",
+  //   name: "Form Layouts",
+  //   meta: { title: "Form Layouts", authRequired: true },
+  //   component: () => import("../views/forms/layouts"),
+  // },
+  // {
+  //   path: "/form/editors",
+  //   name: "Form Editors",
+  //   meta: { title: "Form Editors", authRequired: true },
+  //   component: () => import("../views/forms/editors"),
+  // },
+  // {
+  //   path: "/form/file-uploads",
+  //   name: "File Uploads",
+  //   meta: { title: "File Uploads", authRequired: true },
+  //   component: () => import("../views/forms/file-uploads"),
+  // },
+  // {
+  //   path: "/form/validation",
+  //   name: "Form Validation",
+  //   meta: { title: "Form Validation", authRequired: true },
+  //   component: () => import("../views/forms/validation"),
+  // },
+  // {
+  //   path: "/form/wizard",
+  //   name: "Form Wizard",
+  //   meta: { title: "Form Wizard", authRequired: true },
+  //   component: () => import("../views/forms/wizard"),
+  // },
+  // {
+  //   path: "/form/masks",
+  //   name: "form-mask",
+  //   meta: { title: "Form Mask", authRequired: true },
+  //   component: () => import("../views/forms/masks"),
+  // },
+  // {
+  //   path: "/form/pickers",
+  //   name: "form-pickers",
+  //   meta: { title: "Form Picker", authRequired: true },
+  //   component: () => import("../views/forms/pickers"),
+  // },
+  // {
+  //   path: "/form/range-sliders",
+  //   name: "form-range-slider",
+  //   meta: { title: "Form Range Slider", authRequired: true },
+  //   component: () => import("../views/forms/range-sliders"),
+  // },
+  // {
+  //   path: "/form/select",
+  //   name: "form-select",
+  //   meta: { title: "Form Select", authRequired: true },
+  //   component: () => import("../views/forms/select"),
+  // },
+  // {
+  //   path: "/form/checkboxs-radios",
+  //   name: "form-checkboxs-radio",
+  //   meta: { title: "Checkboxs & Radios", authRequired: true },
+  //   component: () => import("../views/forms/checkboxs-radios"),
+  // },
   {
     path: "/landing",
     name: "landing",
     meta: { title: "Landing", authRequired: true },
     component: () => import("../views/landing/index"),
   },
-  {
-    path: "/nft-landing",
-    name: "nft-landing",
-    meta: { title: "Landing", authRequired: true },
-    component: () => import("../views/landing/nft-landing"),
-  },
-  {
-    path: "/job-landing",
-    name: "job-landing",
-    meta: { title: "Job Landing", authRequired: true },
-    component: () => import("../views/landing/job-landing"),
-  },
-  {
-    path: "/pages/starter",
-    name: "starter",
-    meta: { title: "Starter", authRequired: true },
-    component: () => import("../views/pages/starter"),
-  },
+  // {
+  //   path: "/nft-landing",
+  //   name: "nft-landing",
+  //   meta: { title: "Landing", authRequired: true },
+  //   component: () => import("../views/landing/nft-landing"),
+  // },
+  // {
+  //   path: "/job-landing",
+  //   name: "job-landing",
+  //   meta: { title: "Job Landing", authRequired: true },
+  //   component: () => import("../views/landing/job-landing"),
+  // },
+  // {
+  //   path: "/pages/starter",
+  //   name: "starter",
+  //   meta: { title: "Starter", authRequired: true },
+  //   component: () => import("../views/pages/starter"),
+  // },
   {
     path: "/pages/profile",
     name: "profile",
@@ -757,223 +757,160 @@ export default [
     meta: { title: "FAQs", authRequired: true },
     component: () => import("../views/pages/faqs"),
   },
-  {
-    path: "/pages/pricing",
-    name: "pricing",
-    meta: { title: "Pricing", authRequired: true },
-    component: () => import("../views/pages/pricing"),
-  },
-  {
-    path: "/pages/team",
-    name: "team",
-    meta: { title: "Team", authRequired: true },
-    component: () => import("../views/pages/team"),
-  },
+  // {
+  //   path: "/pages/pricing",
+  //   name: "pricing",
+  //   meta: { title: "Pricing", authRequired: true },
+  //   component: () => import("../views/pages/pricing"),
+  // },
+  // {
+  //   path: "/pages/team",
+  //   name: "team",
+  //   meta: { title: "Team", authRequired: true },
+  //   component: () => import("../views/pages/team"),
+  // },
   {
     path: "/pages/search-results",
     name: "search-results",
     meta: { title: "Search Results", authRequired: true },
     component: () => import("../views/pages/search-results"),
   },
-  {
-    path: "/pages/sitemap",
-    name: "sitemap",
-    meta: { title: "Sitemap", authRequired: true },
-    component: () => import("../views/pages/sitemap"),
-  },
-  {
-    path: "/pages/privacy-policy",
-    name: "privacy-policy",
-    meta: { title: "Privacy Policy", authRequired: true },
-    component: () => import("../views/pages/privacy-policy"),
-  },
-  {
-    path: "/pages/term-conditions",
-    name: "term-conditions",
-    meta: { title: "Term Conditions", authRequired: true },
-    component: () => import("../views/pages/term-conditions"),
-  },
-  {
-    path: "/charts/chartjs",
-    name: "chartjs-chart",
-    meta: { title: "Chartjs", authRequired: true },
-    component: () => import("../views/charts/chartjs/index"),
-  },
-  {
-    path: "/charts/echart",
-    name: "echart",
-    meta: { title: "Echarts", authRequired: true },
-    component: () => import("../views/charts/echart/index"),
-  },
-  {
-    path: '/charts/apex-line',
-    name: 'line',
-    meta: {
-      title: "Line Charts", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/line/index')
-  },
-  {
-    path: '/charts/apex-area',
-    name: 'area-chart',
-    meta: {
-      title: "Area Charts", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/area/index')
-  },
-  {
-    path: '/charts/apex-bar',
-    name: 'bar-chart',
-    meta: {
-      title: "Bar Charts", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/bar/index')
-  },
-  {
-    path: '/charts/apex-column',
-    name: 'column-chart',
-    meta: {
-      title: "Column Charts", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/column/index')
-  },
+  // {
+  //   path: "/pages/sitemap",
+  //   name: "sitemap",
+  //   meta: { title: "Sitemap", authRequired: true },
+  //   component: () => import("../views/pages/sitemap"),
+  // },
+  // {
+  //   path: "/pages/privacy-policy",
+  //   name: "privacy-policy",
+  //   meta: { title: "Privacy Policy", authRequired: true },
+  //   component: () => import("../views/pages/privacy-policy"),
+  // },
+  // {
+  //   path: "/pages/term-conditions",
+  //   name: "term-conditions",
+  //   meta: { title: "Term Conditions", authRequired: true },
+  //   component: () => import("../views/pages/term-conditions"),
+  // },
+  // {
+  //   path: "/charts/chartjs",
+  //   name: "chartjs-chart",
+  //   meta: { title: "Chartjs", authRequired: true },
+  //   component: () => import("../views/charts/chartjs/index"),
+  // },
+  // {
+  //   path: "/charts/echart",
+  //   name: "echart",
+  //   meta: { title: "Echarts", authRequired: true },
+  //   component: () => import("../views/charts/echart/index"),
+  // },
+  // {
+  //   path: '/charts/apex-line',
+  //   name: 'line',
+  //   meta: {
+  //     title: "Line Charts", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/line/index')
+  // },
+  // {
+  //   path: '/charts/apex-area',
+  //   name: 'area-chart',
+  //   meta: {
+  //     title: "Area Charts", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/area/index')
+  // },
+  // {
+  //   path: '/charts/apex-bar',
+  //   name: 'bar-chart',
+  //   meta: {
+  //     title: "Bar Charts", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/bar/index')
+  // },
+  // {
+  //   path: '/charts/apex-column',
+  //   name: 'column-chart',
+  //   meta: {
+  //     title: "Column Charts", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/column/index')
+  // },
 
-  {
-    path: '/charts/apex-mixed',
-    name: 'mixed-chart',
-    meta: {
-      title: "Mixed Charts", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/mixed/index')
-  },
-  {
-    path: '/charts/apex-candlestick',
-    name: 'candlestick',
-    meta: {
-      title: "Candlestick", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/candlestick/index')
-  },
-  {
-    path: '/charts/apex-boxplot',
-    name: 'boxplot',
-    meta: {
-      title: "Boxplot", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/boxplot/index')
-  },
-  {
-    path: '/charts/apex-bubble',
-    name: 'bubble',
-    meta: {
-      title: "Bubble Chart", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/bubble/index')
-  },
-  {
-    path: '/charts/apex-scatter',
-    name: 'scatter',
-    meta: {
-      title: "Scatter", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/scatter/index')
-  },
-  {
-    path: '/charts/apex-heatmap',
-    name: 'heatmap',
-    meta: {
-      title: "Heatmap", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/heatmap/index')
-  },
-  {
-    path: '/charts/apex-treemap',
-    name: 'treemap',
-    meta: {
-      title: "Treemap", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/treemap/index')
-  },
-  {
-    path: '/charts/apex-pie',
-    name: 'pie',
-    meta: {
-      title: "Apex Pie", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/pie/index')
-  },
-  {
-    path: '/charts/apex-radialbar',
-    name: 'radialbar',
-    meta: {
-      title: "Apex Radialbar", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/radiabar/index')
-  },
-  {
-    path: '/charts/apex-radar',
-    name: 'radar',
-    meta: {
-      title: "Apex Radar", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/radar/index')
-  },
-  {
-    path: '/charts/apex-polararea',
-    name: 'polararea',
-    meta: {
-      title: "Polararea", authRequired: true,
-    },
-    component: () => import('../views/charts/apex/polararea/index')
-  },
-  {
-    path: '/advance-ui/animation',
-    name: 'animation',
-    meta: {
-      title: "Animation", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/animation')
-  },
-  {
-    path: '/advance-ui/highlight',
-    name: 'highlight',
-    meta: {
-      title: "Highlight", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/highlight')
-  },
-  {
-    path: '/advance-ui/scrollbar',
-    name: 'scrollbar',
-    meta: {
-      title: "Scrollbar", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/scrollbar')
-  },
-  {
-    path: '/advance-ui/scrollspy',
-    name: 'scrollspy',
-    meta: {
-      title: "Scrollspy", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/scrollspy')
-  },
-  {
-    path: '/advance-ui/sweetalerts',
-    name: 'sweetalerts',
-    meta: {
-      title: "Sweet Alerts", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/sweetalerts')
-  },
-  {
-    path: '/advance-ui/swiper',
-    name: 'Swiper Slider',
-    meta: {
-      title: "Swiper", authRequired: true,
-    },
-    component: () => import('../views/advance-ui/swiper')
-  },
+  // {
+  //   path: '/charts/apex-mixed',
+  //   name: 'mixed-chart',
+  //   meta: {
+  //     title: "Mixed Charts", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/mixed/index')
+  // },
+  // {
+  //   path: '/charts/apex-candlestick',
+  //   name: 'candlestick',
+  //   meta: {
+  //     title: "Candlestick", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/candlestick/index')
+  // },
+  // {
+  //   path: '/charts/apex-boxplot',
+  //   name: 'boxplot',
+  //   meta: {
+  //     title: "Boxplot", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/boxplot/index')
+  // },
+  // {
+  //   path: '/charts/apex-bubble',
+  //   name: 'bubble',
+  //   meta: {
+  //     title: "Bubble Chart", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/bubble/index')
+  // },
+  // {
+  //   path: '/charts/apex-scatter',
+  //   name: 'scatter',
+  //   meta: {
+  //     title: "Scatter", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/scatter/index')
+  // },
+  // {
+  //   path: '/charts/apex-heatmap',
+  //   name: 'heatmap',
+  //   meta: {
+  //     title: "Heatmap", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/heatmap/index')
+  // },
+  // {
+  //   path: '/charts/apex-treemap',
+  //   name: 'treemap',
+  //   meta: {
+  //     title: "Treemap", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/treemap/index')
+  // },
+  // {
+  //   path: '/charts/apex-pie',
+  //   name: 'pie',
+  //   meta: {
+  //     title: "Apex Pie", authRequired: true,
+  //   },
+  //   component: () => import('../views/charts/apex/pie/index')
+  // },
+  
+  
+  
+
+  
+ 
+
+ 
+ 
   {
     path: '/auth/signin-basic',
     name: 'signin-basic',
@@ -1022,22 +959,22 @@ export default [
     },
     component: () => import('../views/auth/reset/cover')
   },
-  {
-    path: '/auth/create-pwd-basic',
-    name: 'create-pwd-basic',
-    meta: {
-      title: "create Password", authRequired: true,
-    },
-    component: () => import('../views/auth/create/basic')
-  },
-  {
-    path: '/auth/create-pwd-cover',
-    name: 'create-pwd-cover',
-    meta: {
-      title: "create Password", authRequired: true,
-    },
-    component: () => import('../views/auth/create/cover')
-  },
+  // {
+  //   path: '/auth/create-pwd-basic',
+  //   name: 'create-pwd-basic',
+  //   meta: {
+  //     title: "create Password", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/create/basic')
+  // },
+  // {
+  //   path: '/auth/create-pwd-cover',
+  //   name: 'create-pwd-cover',
+  //   meta: {
+  //     title: "create Password", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/create/cover')
+  // },
   {
     path: '/auth/lockscreen-basic',
     name: 'lock-screen-basic',
@@ -1046,14 +983,14 @@ export default [
     },
     component: () => import('../views/auth/lockscreen/basic')
   },
-  {
-    path: '/auth/lockscreen-cover',
-    name: 'lock-screen-cover',
-    meta: {
-      title: "Lock Screen", authRequired: true,
-    },
-    component: () => import('../views/auth/lockscreen/cover')
-  },
+  // {
+  //   path: '/auth/lockscreen-cover',
+  //   name: 'lock-screen-cover',
+  //   meta: {
+  //     title: "Lock Screen", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/lockscreen/cover')
+  // },
   {
     path: '/auth/twostep-basic',
     name: 'twostep-basic',
@@ -1061,38 +998,39 @@ export default [
       title: "Two Step Auth", authRequired: true,
     },
     component: () => import('../views/auth/twostep/basic')
-  }, {
-    path: '/auth/twostep-cover',
-    name: 'twostep-cover',
-    meta: {
-      title: "Two Step Auth", authRequired: true,
-    },
-    component: () => import('../views/auth/twostep/cover')
-  },
-  {
-    path: '/auth/404',
-    name: '404',
-    meta: {
-      title: "Error 404", authRequired: true,
-    },
-    component: () => import('../views/auth/errors/404')
-  },
-  {
-    path: '/auth/500',
-    name: '500',
-    meta: {
-      title: "Error 500", authRequired: true,
-    },
-    component: () => import('../views/auth/errors/500')
-  },
-  {
-    path: '/auth/404-basic',
-    name: '404-basic',
-    meta: {
-      title: "Error 404", authRequired: true,
-    },
-    component: () => import('../views/auth/errors/404-basic')
-  },
+  }, 
+  // {
+  //   path: '/auth/twostep-cover',
+  //   name: 'twostep-cover',
+  //   meta: {
+  //     title: "Two Step Auth", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/twostep/cover')
+  // },
+  // {
+  //   path: '/auth/404',
+  //   name: '404',
+  //   meta: {
+  //     title: "Error 404", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/errors/404')
+  // },
+  // {
+  //   path: '/auth/500',
+  //   name: '500',
+  //   meta: {
+  //     title: "Error 500", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/errors/500')
+  // },
+  // {
+  //   path: '/auth/404-basic',
+  //   name: '404-basic',
+  //   meta: {
+  //     title: "Error 404", authRequired: true,
+  //   },
+  //   component: () => import('../views/auth/errors/404-basic')
+  // },
   {
     path: '/auth/404-cover',
     name: '404-cover',
@@ -1141,18 +1079,6 @@ export default [
   //   },
   //   component: () => import('../views/auth/success-msg/cover')
   // },
-  // {
-  //   path: "/maps/google",
-  //   name: "Google Maps",
-  //   meta: {
-  //     title: "Google Maps", authRequired: true,
-  //   },
-  //   component: () => import("../views/maps/google"),
-  // },
-  // {
-  //   path: "/maps/leaflet",
-  //   name: "Leaflet Maps",
-  //   meta: { title: "Leaflet Maps", authRequired: true },
-  //   component: () => import("../views/maps/leaflet/index"),
-  // },
+  
+  
 ];
