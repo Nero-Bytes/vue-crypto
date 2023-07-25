@@ -280,7 +280,7 @@ export default {
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-    <b-row class="container" >
+    <b-row  >
       <!-- Striped Rows -->
         <table class="table table-striped card">
     <tbody>
@@ -309,7 +309,7 @@ export default {
             <td>0</td>
             <td></td>
             <td>CLOSED</td>
-            <td><span class="badge bg-dark">Delete</span></td>
+            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -322,8 +322,8 @@ export default {
             <td>None</td>
             <td></td>
             <td>OPEN</td>
-            <td><span class="badge bg-dark">Delete</span></td>
-            <td><span class="badge bg-dark">SQ. OFF</span></td>
+            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
+            <td><span class="btn btn-outline-danger btn-sm">SQ.OFF</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -336,7 +336,7 @@ export default {
             <td>163.35</td>
             <td>-281.25</td>
             <td>CLOSED</td>
-            <td><span class="badge bg-dark">Delete</span></td>
+            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -349,14 +349,14 @@ export default {
             <td>148</td>
             <td>-1181.25</td>
             <td>CLOSED</td>
-            <td><span class="badge bg-dark">Delete</span></td>
+            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
         </tr>
     </tbody>
 </table>
 
     </b-row>
 
-    <!-- <b-row class="align-items-center mb-4 g-3">
+    <b-row class="align-items-center mb-4 g-3">
       <b-col sm="3">
         <div class="d-flex align-items-center gap-2">
           <span class="text-muted flex-shrink-0">Sort by: </span>
@@ -378,7 +378,7 @@ export default {
           <b-link href="javascript:void(0);" class="btn btn-danger">Withdraw</b-link>
         </div>
       </b-col>
-    </b-row> -->
+    </b-row>
 
     <b-card no-body id="contactList">
       <b-card-header>

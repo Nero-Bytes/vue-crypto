@@ -101,7 +101,7 @@ export default {
 <template>
   <b-card no-body class="card-height-100">
     <b-card-header class="border-0 align-items-center d-flex">
-      <b-card-title class="mb-0 flex-grow-1">My Portfolio</b-card-title>
+      <b-card-title class="mb-0 flex-grow-1">Group Wise Profit</b-card-title>
       <div>
         <div class="dropdown">
           <button class="btn btn-soft-primary btn-sm" data-bs-toggle="dropdown" aria-haspopup="true"
