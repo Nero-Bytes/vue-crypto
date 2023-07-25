@@ -343,6 +343,26 @@ export default {
           </b-col>
           <b-col cols="6">
             <div class="d-flex">
+<!-- added broker and dashboard logo -->
+               <!-- <li class="nav-item"> -->
+          <div class="mx-auto d-flex justify-content-between ">
+            <router-link class="nav-link menu-link mx-1" :to="{ name: 'crypto default' }"
+            style="font-size: 30px;"
+            >
+              <i class="ri-dashboard-line "></i>
+              <!-- <span data-key="t-dashboard">{{ $t("t-dashboard") }}</span> -->
+            </router-link>
+          <!-- </li> -->
+
+          <!-- <li class="nav-item"> -->
+            <router-link class="nav-link menu-link" :to="{ name: 'broker' }"
+            style="font-size: 30px;"
+            >
+              <i class="ri-coin-line m-4"></i>
+              <!-- <span data-key="t-broker">{{ $t("t-broker") }}</span> -->
+            </router-link>
+          <!-- </li> -->
+          </div>
               <div class="d-flex justify-content-end text-end flex-wrap gap-4 ms-auto">
                 <div class="pe-3">
                   <h6 class="mb-2 text-truncate text-muted">Total Balance</h6>
@@ -366,5 +386,66 @@ export default {
       <apexchart class="apex-charts" height="294" dir="ltr" :series="series" :options="chartOptions"></apexchart>
 
     </b-card-body>
+    <hr/>
+<div class="container">
+    <div class="row mb-2">
+           <div class="col">
+             <strong>NFTY2371219500CE</strong>
+           </div>
+           <div class="col">
+             NFO
+           </div>
+           <div class="col">
+             500
+           </div>
+           <div class="col">
+             10:57
+           </div>
+           <div class="col">
+             11:59
+           </div>
+           <div class="col">
+             120.35
+           </div>
+           <div class="col">
+             - 125.35 + 2500
+           </div>
+           <div class="col">
+             SOOF(BUTTON)
+           </div>
+    </div>
+</div>
+<hr/>
+<div class="container">
+    <div class="row mb-4">
+           <div class="col">
+             <strong>Group Name</strong>
+           </div>
+           <div class="col">
+             script
+           </div>
+           <div class="col">
+             exchange
+           </div>
+           <div class="col">
+             QTY
+           </div>
+           <div class="col">
+             entrytime
+           </div>
+           <div class="col">
+             exittime
+           </div>
+           <div class="col">
+             entryprice
+           </div>
+           <div class="col">
+            Itp
+           </div>
+           <div class="col">
+            pnl
+           </div>
+    </div>
+</div>
   </b-card>
 </template>
