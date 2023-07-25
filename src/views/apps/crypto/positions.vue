@@ -309,7 +309,7 @@ export default {
             <td>0</td>
             <td></td>
             <td>CLOSED</td>
-            <td><span class="badge bg-success">Delete</span></td>
+            <td><span class="badge bg-dark">Delete</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -322,8 +322,8 @@ export default {
             <td>None</td>
             <td></td>
             <td>OPEN</td>
-            <td><span class="badge bg-success">Delete</span></td>
-            <td><span class="badge bg-success">SQ. OFF</span></td>
+            <td><span class="badge bg-dark">Delete</span></td>
+            <td><span class="badge bg-dark">SQ. OFF</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -336,7 +336,7 @@ export default {
             <td>163.35</td>
             <td>-281.25</td>
             <td>CLOSED</td>
-            <td><span class="badge bg-success">Delete</span></td>
+            <td><span class="badge bg-dark">Delete</span></td>
         </tr>
         <tr>
             <td>ALGO OSSILATOR</td>
@@ -349,7 +349,7 @@ export default {
             <td>148</td>
             <td>-1181.25</td>
             <td>CLOSED</td>
-            <td><span class="badge bg-success">Delete</span></td>
+            <td><span class="badge bg-dark">Delete</span></td>
         </tr>
     </tbody>
 </table>
