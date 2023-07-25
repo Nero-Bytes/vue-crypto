@@ -1,5 +1,5 @@
 <script>
-import Multiselect from "@vueform/multiselect";
+// import Multiselect from "@vueform/multiselect";
 import "@vueform/multiselect/themes/default.css";
 
 // import { CountTo } from "vue3-count-to";
@@ -28,7 +28,7 @@ export default {
     // Swiper,
     // SwiperSlide,
     lottie: Lottie,
-    Multiselect
+    // Multiselect
   },
   page: {
     title: "Positions",
@@ -280,140 +280,83 @@ export default {
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-    <!-- <b-row>
-      <b-col xxl="3" md="6">
-        <b-card no-body class="card-animate">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-grow-1">
-                <lottie colors="primary:#121331,secondary:#08a88a" :options="defaultOptions" :height="55" :width="55"
-                  class="me-auto m-0" />
-              </div>
-              <div class="flex-shrink-0">
-                <b-link href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</b-link>
-              </div>
-            </div>
-            <h3 class="mb-2">
-              $ <count-to :duration="5000" :startVal="0" :endVal="74854"></count-to><small
-                class="text-muted fs-13">.68k</small>
-            </h3>
-            <h6 class="text-muted mb-0">Available Balance (USD)</h6>
-          </b-card-body>
-        </b-card>
-      </b-col>
-      <b-col xxl="3" md="6">
-        <b-card no-body class="card-animate">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-grow-1">
-                <lottie colors="primary:#405189,secondary:#0ab39c" :options="defaultOptions1" :height="55" :width="55"
-                  class="me-auto m-0" />
-              </div>
-              <div class="flex-shrink-0">
-                <b-link href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</b-link>
-              </div>
-            </div>
-            <h3 class="mb-2">
-              $<count-to :duration="5000" :startVal="0" :endVal="74361"></count-to><small
-                class="text-muted fs-13">.34k</small>
-            </h3>
-            <h6 class="text-muted mb-0">Send (Previous Month)</h6>
-          </b-card-body>
-        </b-card>
-      </b-col>
-      <b-col xxl="3" md="6">
-        <b-card no-body class="card-animate">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-grow-1">
-                <lottie colors="primary:#405189,secondary:#0ab39c" :options="defaultOptions3" :height="55" :width="55"
-                  class="me-auto m-0" />
-              </div>
-              <div class="flex-shrink-0">
-                <b-link href="javascript:void(0);" class="badge badge-soft-warning badge-border">BTC</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-info badge-border">ETH</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary badge-border">USD</b-link>
-                <b-link href="javascript:void(0);" class="badge badge-soft-danger badge-border">EUR</b-link>
-              </div>
-            </div>
-            <h3 class="mb-2">
-              $<count-to :duration="5000" :startVal="0" :endVal="97685"></count-to><small
-                class="text-muted fs-13">.22k</small>
-            </h3>
-            <h6 class="text-muted mb-0">Receive (Previous Month)</h6>
-          </b-card-body>
-        </b-card>
-      </b-col>
-      <b-col xxl="3" md="6">
-        <swiper class="swiper-wrapper">
-          <swiper-slide>
-            <b-card no-body class="card-animate">
-              <b-card-body class="bg-soft-warning">
-                <div class="d-flex mb-3">
-                  <div class="flex-grow-1">
-                    <lottie colors="primary:#405189,secondary:#0ab39c" :options="defaultOptions4" :height="55"
-                      :width="55" class="me-auto m-0" />
-                  </div>
-                  <div class="flex-shrink-0">
-                    <b-link href="javascript:void(0);" class="fw-medium">Bitcoin (BTC)</b-link>
-                  </div>
-                </div>
-                <h3 class="mb-2">
-                  $245<small class="text-muted fs-13">.65k</small>
-                </h3>
-                <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
-              </b-card-body>
-            </b-card>
-          </swiper-slide>
-          <swiper-slide>
-            <b-card no-body class="card-animate">
-              <b-card-body class="bg-soft-warning">
-                <div class="d-flex mb-3">
-                  <div class="flex-grow-1">
-                    <lottie colors="primary:#405189,secondary:#0ab39c" :options="defaultOptions4" :height="55"
-                      :width="55" class="me-auto m-0" />
-                  </div>
-                  <div class="flex-shrink-0">
-                    <b-link href="javascript:void(0);" class="fw-medium">Ethereum (ETH)</b-link>
-                  </div>
-                </div>
-                <h3 class="mb-2">
-                  $24<small class="text-muted fs-13">.74k</small>
-                </h3>
-                <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
-              </b-card-body>
-            </b-card>
-          </swiper-slide>
-          <swiper-slide>
-            <b-card no-body class="card-animate">
-              <b-card-body class="bg-soft-warning">
-                <div class="d-flex mb-3">
-                  <div class="flex-grow-1">
-                    <lottie colors="primary:#405189,secondary:#0ab39c" :options="defaultOptions4" :height="55"
-                      :width="55" class="me-auto m-0" />
-                  </div>
-                  <div class="flex-shrink-0">
-                    <b-link href="javascript:void(0);" class="fw-medium">Monero (XMR)</b-link>
-                  </div>
-                </div>
-                <h3 class="mb-2">
-                  $124<small class="text-muted fs-13">.36k</small>
-                </h3>
-                <h6 class="text-muted mb-0">Send - Receive (Previous Month)</h6>
-              </b-card-body>
-            </b-card>
-          </swiper-slide>
-        </swiper>
-      </b-col>
-    </b-row> -->
+    <b-row class="container" >
+      <!-- Striped Rows -->
+        <table class="table table-striped card">
+    <tbody>
+        
+         <tr>
+            <th scope="col">STRATEGIES NAME</th>
+            <th scope="col">USER ID</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">ENTRY TIME</th>
+            <th scope="col">SCRIPT</th>
+            <th scope="col">QTY</th>
+            <th scope="col">ENTRY PRICE</th>
+            <th scope="col">EXIT PRICE</th>
+            <th scope="col">PNL</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">ACTIONS</th>
+        </tr>
+        <tr>
+            <td>ALGO OSSILATOR</td>
+            <td>2</td>
+            <td>demo1232@gmail.com</td>
+            <td>2023-19-10 19:38:32</td>
+            <td>NFTY2344254OOPE</td>
+            <td>50</td>
+            <td>64.7</td>
+            <td>0</td>
+            <td></td>
+            <td>CLOSED</td>
+            <td><span class="badge bg-success">Delete</span></td>
+        </tr>
+        <tr>
+            <td>ALGO OSSILATOR</td>
+            <td>6</td>
+            <td>demo1232@gmail.com</td>
+            <td>2023-19-10 19:38:32</td>
+            <td>NFTY2344254OOPE</td>
+            <td>50</td>
+            <td>74.7</td>
+            <td>None</td>
+            <td></td>
+            <td>OPEN</td>
+            <td><span class="badge bg-success">Delete</span></td>
+            <td><span class="badge bg-success">SQ. OFF</span></td>
+        </tr>
+        <tr>
+            <td>ALGO OSSILATOR</td>
+            <td>5</td>
+            <td>demosfdgh1232@gmail.com</td>
+            <td>2023-19-10 19:38:32</td>
+            <td>NFTY2344254OOPE</td>
+            <td>50</td>
+            <td>64.7</td>
+            <td>163.35</td>
+            <td>-281.25</td>
+            <td>CLOSED</td>
+            <td><span class="badge bg-success">Delete</span></td>
+        </tr>
+        <tr>
+            <td>ALGO OSSILATOR</td>
+            <td>6</td>
+            <td>demo1232@gmail.com</td>
+            <td>2023-19-10 19:38:32</td>
+            <td>NFTY2344254OOPGSE</td>
+            <td>50</td>
+            <td>64.7</td>
+            <td>148</td>
+            <td>-1181.25</td>
+            <td>CLOSED</td>
+            <td><span class="badge bg-success">Delete</span></td>
+        </tr>
+    </tbody>
+</table>
 
-    <b-row class="align-items-center mb-4 g-3">
+    </b-row>
+
+    <!-- <b-row class="align-items-center mb-4 g-3">
       <b-col sm="3">
         <div class="d-flex align-items-center gap-2">
           <span class="text-muted flex-shrink-0">Sort by: </span>
@@ -435,7 +378,7 @@ export default {
           <b-link href="javascript:void(0);" class="btn btn-danger">Withdraw</b-link>
         </div>
       </b-col>
-    </b-row>
+    </b-row> -->
 
     <b-card no-body id="contactList">
       <b-card-header>
