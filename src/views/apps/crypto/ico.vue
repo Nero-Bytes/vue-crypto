@@ -13,6 +13,11 @@ export default {
     title: "Strategies",
     meta: [{ name: "description", content: appConfig.description }],
   },
+  computed: {
+    isAdmin() {
+      return this.$route.path.includes('/admin');
+    },
+  },
   data() {
     return {
       title: "Strategies",
@@ -38,7 +43,7 @@ export default {
           title: 'Active ICOs',
           icos: [
             {
-              icon: '/assets/images/svg/crypto-icons/btc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/btc.svg'),
               name: 'Data Wallet',
               category: 'Blockchain Services',
               amount: '$15,00,000 / $13,75,954',
@@ -47,7 +52,7 @@ export default {
               days: '05 Days',
             },
             {
-              icon: '/assets/images/companies/img-6.png',
+              icon: require('@/assets/images/companies/img-6.png'),
               name: 'GreatRiver Technology',
               category: 'Information Technology',
               amount: '$39,00,000 / $31,57,654',
@@ -57,7 +62,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/vtc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/vtc.svg'),
               name: 'Manta Network Finance',
               category: 'Finance Services',
               amount: '$42,50,000 / $30,84,214',
@@ -67,7 +72,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/xsg.svg',
+              icon: require('@/assets/images/svg/crypto-icons/xsg.svg'),
               name: 'Goldfinch Network',
               category: 'Blockchain Services',
               amount: '$42,50,000 / $30,84,214',
@@ -259,7 +264,7 @@ export default {
     </b-card>
 
     <b-row>
-      <b-col md="12">
+      <b-col md="12" v-if="isAdmin">
         <div class="d-flex mb-2">
           <button class="btn btn-success" >
             <i class="ri-add-line"></i> Add ICOs
@@ -307,7 +312,7 @@ export default {
              </h6>
            </div>
          </b-card-body>
-         <div class='d-flex align-items-center justify-content-between m-1'>
+         <div v-if="isAdmin" class='d-flex align-items-center justify-content-between m-1'>
             <!-- Button for editing data -->
             <button class="btn btn-outline-warning" >
               <i class="ri-edit-line"></i> Edit
