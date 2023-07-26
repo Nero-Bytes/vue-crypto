@@ -19,10 +19,11 @@ import animationData4 from "@/components/widgets/vaeagfzc.json";
 import Layout from "../../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
 import appConfig from "../../../../app.config";
-
+import Table from "./table"
 export default {
   components: {
     Layout,
+    Table,
     PageHeader,
     // CountTo,
     // Swiper,
@@ -280,82 +281,8 @@ export default {
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-    <b-row  >
-      <!-- Striped Rows -->
-        <table class="table table-striped card">
-    <tbody>
-        
-         <tr>
-            <th scope="col">STRATEGIES NAME</th>
-            <th scope="col">USER ID</th>
-            <th scope="col">EMAIL</th>
-            <th scope="col">ENTRY TIME</th>
-            <th scope="col">SCRIPT</th>
-            <th scope="col">QTY</th>
-            <th scope="col">ENTRY PRICE</th>
-            <th scope="col">EXIT PRICE</th>
-            <th scope="col">PNL</th>
-            <th scope="col">STATUS</th>
-            <th scope="col">ACTIONS</th>
-        </tr>
-        <tr>
-            <td>ALGO OSSILATOR</td>
-            <td>2</td>
-            <td>demo1232@gmail.com</td>
-            <td>2023-19-10 19:38:32</td>
-            <td>NFTY2344254OOPE</td>
-            <td>50</td>
-            <td>64.7</td>
-            <td>0</td>
-            <td></td>
-            <td>CLOSED</td>
-            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
-        </tr>
-        <tr>
-            <td>ALGO OSSILATOR</td>
-            <td>6</td>
-            <td>demo1232@gmail.com</td>
-            <td>2023-19-10 19:38:32</td>
-            <td>NFTY2344254OOPE</td>
-            <td>50</td>
-            <td>74.7</td>
-            <td>None</td>
-            <td></td>
-            <td>OPEN</td>
-            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
-            <td><span class="btn btn-outline-danger btn-sm">SQ.OFF</span></td>
-        </tr>
-        <tr>
-            <td>ALGO OSSILATOR</td>
-            <td>5</td>
-            <td>demosfdgh1232@gmail.com</td>
-            <td>2023-19-10 19:38:32</td>
-            <td>NFTY2344254OOPE</td>
-            <td>50</td>
-            <td>64.7</td>
-            <td>163.35</td>
-            <td>-281.25</td>
-            <td>CLOSED</td>
-            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
-        </tr>
-        <tr>
-            <td>ALGO OSSILATOR</td>
-            <td>6</td>
-            <td>demo1232@gmail.com</td>
-            <td>2023-19-10 19:38:32</td>
-            <td>NFTY2344254OOPGSE</td>
-            <td>50</td>
-            <td>64.7</td>
-            <td>148</td>
-            <td>-1181.25</td>
-            <td>CLOSED</td>
-            <td><span class="btn btn-outline-danger btn-sm">Delete</span></td>
-        </tr>
-    </tbody>
-</table>
-
-    </b-row>
-
+  <Table/>
+  
  <b-row class="align-items-center mb-4 g-3">
       <b-col sm="3">
         <div class="d-flex align-items-center gap-2">
