@@ -281,7 +281,7 @@ export default {
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-  <Table/>
+    <Table/>
   
  <b-row class="align-items-center mb-4 g-3">
       <b-col sm="3">

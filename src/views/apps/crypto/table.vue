@@ -90,9 +90,9 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl:-45,
+        pnl: 40,
+        ltp: 30,
         status:'CLOSED',
-
         company: "Force Medicines",
         score: "147",
         phone: "580-464-4694",
@@ -109,7 +109,8 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl:-45,
+        pnl: 35,
+        ltp: 40,
         status:'CLOSED',
         company: "iTest Factory",
         score: "230",
@@ -127,7 +128,8 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl:-45,
+        pnl: 15,
+        ltp: 10,
         status:'CLOSED',
         company: "Syntyce Solutions",
 
@@ -146,7 +148,8 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl:-45,
+        pnl: 25,
+        ltp: 20,
         status:'CLOSED',
         company: "Micro Design",
         score: "352",
@@ -194,38 +197,6 @@ export default {
     },
   },
   methods: {
-    // editdata(data) {
-    //   this.addLeadsModal = true;
-    //   document.querySelector('.exampleModalLabel').innerHTML = "Edit Lead";
-    //   document.getElementById('id').value = data._id;
-    //   document.getElementById('customername').value = data.name;
-    //   document.getElementById('companyname').value = data.company;
-    //   document.getElementById('leadsscore').value = data.score;
-    //   document.getElementById('phone').value = data.phone;
-    //   document.getElementById('location').value = data.location;
-    //   document.getElementById('date').value = data.date;
-    //   this.tagvalue = data.tags;
-    //   document.getElementById('edit-btn').style.display = 'block';
-    //   document.getElementById('add-btn').style.display = 'none';
-    // },
-    // updateorder() {
-    //   let result = this.leads.findIndex(o => o._id == document.getElementById('id').value);
-    //   this.leads[result].name = document.getElementById('customername').value;
-    //   this.leads[result].company = document.getElementById('companyname').value;
-    //   this.leads[result].score = document.getElementById('leadsscore').value;
-    //   this.leads[result].phone = document.getElementById('phone').value;
-    //   this.leads[result].location = document.getElementById('location').value;
-    //   this.leads[result].tags = this.tagvalue;
-    //   this.leads[result].date = document.getElementById('date').value;
-    //   document.getElementById('closemodal').click();
-    //   axios.patch(`https://api-node.themesbrand.website/apps/lead/${document.getElementById('id').value}`, this.leads[
-    //     result])
-    //     .then(() => {
-
-    //     }).catch((er) => {
-    //       console.log(er);
-    //     });
-    // },
     deletedata(event) {
       Swal.fire({
         title: "Are you sure?",
@@ -287,43 +258,6 @@ export default {
         });
       }
     },
-    // addorder() {
-    //   var id = this.leads.length + 1;
-    //   var name = document.getElementById('customername').value;
-    //   var company = document.getElementById('companyname').value;
-    //   var score = document.getElementById('leadsscore').value;
-    //   var phone = document.getElementById('phone').value;
-    //   var location = document.getElementById('location').value;
-    //   var date = document.getElementById('date').value;
-
-    //   var data = {
-    //     id: id,
-    //     name: name,
-    //     // email:email,
-    //     company: company,
-    //     score: score,
-    //     phone: phone,
-    //     location: location,
-    //     date: date,
-    //   };
-    //   this.leads.push(data);
-    //   axios.post(`https://api-node.themesbrand.website/apps/lead`, data)
-    //     .then(() => {
-
-    //     }).catch((er) => {
-    //       console.log(er);
-    //     });
-    //   document.getElementById('closemodal').click();
-    //   document.getElementById("addform").reset();
-    // },
-    // addnew() {
-    //   this.addLeadsModal = true;
-    //   this.tagvalue = null;
-    //   document.getElementById("addform").reset();
-    //   document.querySelector('.exampleModalLabel').innerHTML = "Add Leads";
-    //   document.getElementById('add-btn').style.display = 'block';
-    //   document.getElementById('edit-btn').style.display = 'none';
-    // },
     setPages() {
       let numberOfPages = Math.ceil(this.leads.length / this.perPage);
       this.pages = [];
@@ -376,24 +310,6 @@ export default {
       });
     });
   },
-//   beforeMount() {
-//     axios.get('https://api-node.themesbrand.website/apps/lead').then((data) => {
-//       this.leads = [];
-//       data.data.data.forEach((row) => {
-//         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
-//           "Oct", "Nov", "Dec"
-//         ];
-//         var dd = new Date(row.date);
-//         row.date = dd.getDate() + " " + monthNames[dd.getMonth()] + ", " + dd.getFullYear();
-//         // row.image_src = 'https://api-node.themesbrand.website/images/users/' + row.image_src;
-//         this.leads.push(row);
-//       });
-//     }).catch((er) => {
-//       console.log(er);
-//     });
-
-//   },
-
 };
 </script>
 
@@ -423,6 +339,7 @@ export default {
                       <th class="sort" data-sort="date">ENTRY PRICE</th>
                       <th class="sort" data-sort="action">EXIT PRICE</th>
                       <th class="sort" data-sort="action">PNL</th>
+                      <th class="sort" data-sort="action">LTP</th>
                       <th class="sort" data-sort="action">STATUS</th>
                       <th class="sort" data-sort="action">ACTIONS</th>
                     </tr>
@@ -447,7 +364,8 @@ export default {
                       <td class="location">{{ data.script }}</td>
                       <td class="location">{{ data.qty }}</td>
                       <td class="location">{{ data.entryprice }}</td>
-                      <td class="location">{{ data.exitprice }}</td>
+                      <td class="location">{{ data.pnl }}</td>
+                      <td class="location">{{ data.ltp }}</td>
                       <td class="location">{{ data.status }}</td>
                       <!-- <td class="tags">
                         <span v-for="(tag, index) of data.tags" :key="index">

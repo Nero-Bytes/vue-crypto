@@ -13,13 +13,8 @@ import "swiper/swiper-bundle.css";
 SwiperCore.use([Thumbs, Pagination, Navigation]);
 
 import Portfolio from "./portfolio.vue";
-// import PositionTable from '../../apps/crypto/positions.vue';
-// import MarketGraph from "./market-graph.vue";
-import News from "./news.vue";
 import RecentActivity from "./recent-activity.vue";
 import TopProgram from "./top-performers.vue";
-import Currencies from "./currencies.vue";
-import Trading from "./trading.vue";
 
 export default {
   page: {
@@ -50,7 +45,7 @@ export default {
         {
           id: 1,
           icon: "ri-money-dollar-circle-fill",
-          label: "Total Invested",
+          label: "Total Fund",
           counter: "2390.68",
           badge: "ri-arrow-up-s-fill",
           badgeColor: "success",
@@ -59,7 +54,7 @@ export default {
         {
           id: 2,
           icon: "ri-arrow-up-circle-fill",
-          label: "Total Change",
+          label: "Profit",
           counter: "19523.25",
           badge: "ri-arrow-up-s-fill",
           badgeColor: "success",
@@ -68,7 +63,7 @@ export default {
         {
           id: 3,
           icon: "ri-arrow-down-circle-fill",
-          label: "Day Change",
+          label: "Broker",
           counter: "14799.44",
           badge: "ri-arrow-down-s-fill",
           badgeColor: "danger",
@@ -782,9 +777,6 @@ export default {
     Multiselect,
     RecentActivity,
     TopProgram,
-    News,
-    Currencies,
-    Trading,
     Swiper,
     SwiperSlide,
   },
@@ -1573,23 +1565,11 @@ export default {
     </b-row>
 
     <b-row>
-      <b-col xl="8">
-        <Currencies />
-      </b-col>
-      <b-col xl="4">
-        <Trading />
-      </b-col>
-    </b-row>
-
-    <b-row>
       <b-col xxl="4" lg="6">
         <RecentActivity />
       </b-col>
       <b-col xxl="4" lg="6">
         <TopProgram />
-      </b-col>
-      <b-col xxl="4" lg="6">
-        <News />
       </b-col>
     </b-row>
   </Layout>

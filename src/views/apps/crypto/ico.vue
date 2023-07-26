@@ -84,6 +84,75 @@ export default {
           ]
         },
         {
+          title: 'Ended ICOs',
+          icos: [
+            {
+              icon: require('@/assets/images/svg/crypto-icons/bela.svg'),
+              name: 'Social Chain',
+              category: 'Blockchain Services',
+              amount: '$15,00,000 / $13,75,954',
+              percentage: '89.97%',
+              stars: '4.8',
+              days: '05 Days',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Angels Crypto',
+              category: 'Blockchain Services',
+              amount: '$39,00,000 / $31,57,654',
+              percentage: '84.57%',
+              stars: '4.4',
+              days: '15 Days',
+              visited: 'Visit Website',
+            },
+            {
+              icon:  require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Manta Network Finance',
+              category: 'Finance Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/cs.svg'),
+              name: 'Goldfinch Network',
+              category: 'Blockchain Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+          ],
+        },
+        {
+          title: 'Upcoming ICOs',
+          icos: [
+            {
+              icon: require('@/assets/images/svg/crypto-icons/add.svg'),
+              name: 'World Doin',
+              category: 'Blockchain Services',
+              amount: '$64,00,000',
+              percentage: '70.24%',
+              stars: '3.7',
+              days: '15 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/atm.svg'),
+              name: 'Bridge Plus',
+              category: 'Platform',
+              amount: '$45,80,000',
+              percentage: '30.24%',
+              stars: '3.5',
+              days: '15 Mar, 2021',
+              visited: 'Visit Website',
+            },
+          ]
+        },
+        {
           title: 'Trading ICOs',
           icos: [
             {
