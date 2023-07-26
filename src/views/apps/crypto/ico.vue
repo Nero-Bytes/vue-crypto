@@ -33,6 +33,82 @@ export default {
         mode: "range",
         dateFormat: "d M, Y",
       },
+      icosData: [
+        {
+          title: 'Active ICOs',
+          icos: [
+            {
+              icon: '/assets/images/svg/crypto-icons/btc.svg',
+              name: 'Data Wallet',
+              category: 'Blockchain Services',
+              amount: '$15,00,000 / $13,75,954',
+              percentage: '89.97%',
+              stars: '4.8',
+              days: '05 Days',
+            },
+            {
+              icon: '/assets/images/companies/img-6.png',
+              name: 'GreatRiver Technology',
+              category: 'Information Technology',
+              amount: '$39,00,000 / $31,57,654',
+              percentage: '84.57%',
+              stars: '4.4',
+              days: '15 Days',
+              visited: 'Visit Website',
+            },
+            {
+              icon: '/assets/images/svg/crypto-icons/vtc.svg',
+              name: 'Manta Network Finance',
+              category: 'Finance Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: '/assets/images/svg/crypto-icons/xsg.svg',
+              name: 'Goldfinch Network',
+              category: 'Blockchain Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+          ]
+        },
+        // {
+        //   title: 'Ended ICOs',
+        //   icos: [
+        //     // List of ended ICOs
+        //     // Example:
+        //     // { name: 'Social Chain', category: 'Blockchain Services', ... },
+        //     // { name: 'Angels Crypto', category: 'Blockchain Services', ... },
+        //     // Add more ended ICOs as needed
+        //   ]
+        // },
+        // {
+        //   title: 'Upcoming ICOs',
+        //   icos: [
+        //     // List of upcoming ICOs
+        //     // Example:
+        //     // { name: 'World Doin', category: 'Blockchain Services', ... },
+        //     // { name: 'Bridge Plus', category: 'Platform', ... },
+        //     // Add more upcoming ICOs as needed
+        //   ]
+        // },
+        // {
+        //   title: 'Trading ICOs',
+        //   icos: [
+        //     // List of trading ICOs
+        //     // Example:
+        //     // { name: 'PowerCoin', category: 'Blockchain Services', ... },
+        //     // { name: 'Cyber Wonder', category: 'Platform', ... },
+        //     // Add more trading ICOs as needed
+        //   ]
+        // },
+      ]
     };
   },
   components: {
@@ -167,207 +243,64 @@ export default {
     </b-card>
 
     <b-row>
-      <b-col xxl="3" md="6">
+      <b-col md="12">
+        <div class="d-flex mb-2">
+          <button class="btn btn-success" >
+            <i class="ri-add-line"></i> Add ICOs
+          </button>
+        </div>
+      </b-col>
+      <b-col xxl="3" md="6" v-for="(group, index) in icosData" :key="index">
         <b-card no-body class="overflow-hidden">
           <b-card-body class="bg-soft-success">
-            <h5 class="fs-17 text-center mb-0">Active ICOs</h5>
+            <h5 class="fs-17 text-center mb-0">{{ group.title }}</h5>
           </b-card-body>
         </b-card>
-       <b-card no-body class="mb-2">
+        <b-card no-body class="mb-2" v-for="(ico, i) in group.icos" :key="i">
          <b-card-body>
            <div class="d-flex mb-3">
              <div class="flex-shrink-0 avatar-sm">
                <div class="avatar-title bg-light rounded">
-                 <img src="@/assets/images/svg/crypto-icons/btc.svg" alt="" class="avatar-xxs" />
+                 <img :src="ico.icon" alt="" class="avatar-xxs" />
                </div>
              </div>
              <div class="flex-grow-1 ms-3">
-               <h5 class="fs-15 mb-1">Data Wallet</h5>
-               <p class="text-muted mb-2">Blockchain Services</p>
+               <h5 class="fs-15 mb-1">{{ ico.name }}</h5>
+               <p class="text-muted mb-2">{{ ico.category }}</p>
              </div>
              <div>
-               <!-- Add the three buttons here -->
-               <button class="btn btn-outline-danger m-1 " >
-                     <i class="ri-delete-bin-line"></i> 
-                   </button>
-            
-                 
+               <b-link v-if="ico && ico.visited" href="javascript:void(0);" class="badge badge-soft-primary">{{ ico.visited }}
+                 <i class="ri-arrow-right-up-line align-bottom"></i>
+               </b-link>
              </div>
            </div>
            <h6 class="text-muted mb-0">
-             $15,00,000 / $13,75,954
-             <b-badge variant="soft-success" class="badge-soft-success">89.97%</b-badge>
+             {{ ico.amount }}
+             <b-badge variant="soft-success" class="badge-soft-success">{{ ico.percentage }}</b-badge>
            </h6>
          </b-card-body>
          <b-card-body class="border-top border-top-dashed">
            <div class="d-flex">
              <div class="flex-grow-1">
                <h6 class="mb-0">
-                 4.8 <i class="ri-star-fill align-bottom text-warning"></i>
+                 {{ ico.stars }} <i class="ri-star-fill align-bottom text-warning"></i>
                </h6>
              </div>
              <h6 class="flex-shrink-0 text-danger mb-0">
-               <i class="ri-time-line align-bottom"></i> 05 Days
+               <i class="ri-time-line align-bottom"></i> {{ ico.days }}
              </h6>
            </div>
          </b-card-body>
-         <div class='d-flex align-items-center justify-content-between '>
-            
-                   <!-- Button for editing data -->
-                   <button class="btn btn-outline-warning" >
-                     <i class="ri-edit-line"></i> Edit
-                   </button>
-            
-                   <!-- Button for adding data -->
-                   <button class="btn btn-outline-success m-1" >
-                     <i class="ri-add-line"></i> Add
-                   </button>
-             </div>
-       </b-card>
-       
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/companies/img-6.png" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">GreatRiver Technology</h5>
-                <p class="text-muted mb-2">Information Technology</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-1">
-              $39,00,000 / $31,57,654
-              <b-badge variant="soft-success" class="badge-soft-success">84.57%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  4.4 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-danger mb-0">
-                <i class="ri-time-line align-bottom"></i> 15 Days
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/vtc.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Manta Network Finance</h5>
-                <p class="text-muted mb-2">Finance Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $42,50,000 / $30,84,214
-              <b-badge variant="soft-success" class="badge-soft-success">70.24%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  2.7 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 25 Jan, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/xsg.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Goldfinch Network</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $28,00,000 / $8,74,986
-              <b-badge variant="soft-success" class="badge-soft-success">24.57%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.2 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 04 Feb, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/companies/img-8.png" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Galaxy War</h5>
-                <p class="text-muted mb-2">Gaming</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $40,00,000 / $24,12,741
-              <b-badge variant="soft-success" class="badge-soft-success">62.04%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.9 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 05 March, 2022
-              </h6>
-            </div>
-          </b-card-body>
+         <div class='d-flex align-items-center justify-content-between m-1'>
+            <!-- Button for editing data -->
+            <button class="btn btn-outline-warning" >
+              <i class="ri-edit-line"></i> Edit
+            </button>
+            <!-- Button for adding data -->
+            <button class="btn btn-outline-danger" >
+              <i class="ri-delete-bin-line"></i> Delete
+            </button>
+         </div>
         </b-card>
       </b-col>
 
