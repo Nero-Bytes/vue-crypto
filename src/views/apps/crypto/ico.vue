@@ -83,16 +83,50 @@ export default {
             },
           ]
         },
-        // {
-        //   title: 'Ended ICOs',
-        //   icos: [
-        //     // List of ended ICOs
-        //     // Example:
-        //     // { name: 'Social Chain', category: 'Blockchain Services', ... },
-        //     // { name: 'Angels Crypto', category: 'Blockchain Services', ... },
-        //     // Add more ended ICOs as needed
-        //   ]
-        // },
+        {
+          title: 'Ended ICOs',
+          endedicos: [
+            {
+              icon: require('@/assets/images/svg/crypto-icons/bela.svg'),
+              name: 'Social Chain',
+              category: 'Blockchain Services',
+              amount: '$15,00,000 / $13,75,954',
+              percentage: '89.97%',
+              stars: '4.8',
+              days: '05 Days',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Angels Crypto',
+              category: 'Blockchain Services',
+              amount: '$39,00,000 / $31,57,654',
+              percentage: '84.57%',
+              stars: '4.4',
+              days: '15 Days',
+              visited: 'Visit Website',
+            },
+            {
+              icon:  require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Manta Network Finance',
+              category: 'Finance Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/cs.svg'),
+              name: 'Goldfinch Network',
+              category: 'Blockchain Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+          ],
+        },
         {
           title: 'Upcoming ICOs',
           icos: [
@@ -118,17 +152,7 @@ export default {
             },
           ]
         },
-        // {
-        //   title: 'Trading ICOs',
-        //   icos: [
-        //     // List of trading ICOs
-        //     // Example:
-        //     // { name: 'PowerCoin', category: 'Blockchain Services', ... },
-        //     // { name: 'Cyber Wonder', category: 'Platform', ... },
-        //     // Add more trading ICOs as needed
-        //   ]
-        // },
-      ]
+      ],
     };
   },
   components: {
