@@ -38,7 +38,7 @@ export default {
           title: 'Active ICOs',
           icos: [
             {
-              icon: '/assets/images/svg/crypto-icons/btc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/btc.svg'),
               name: 'Data Wallet',
               category: 'Blockchain Services',
               amount: '$15,00,000 / $13,75,954',
@@ -47,7 +47,7 @@ export default {
               days: '05 Days',
             },
             {
-              icon: '/assets/images/companies/img-6.png',
+              icon: require('@/assets/images/companies/img-6.png'),
               name: 'GreatRiver Technology',
               category: 'Information Technology',
               amount: '$39,00,000 / $31,57,654',
@@ -57,7 +57,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/vtc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/vtc.svg'),
               name: 'Manta Network Finance',
               category: 'Finance Services',
               amount: '$42,50,000 / $30,84,214',
@@ -67,7 +67,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/xsg.svg',
+              icon: require('@/assets/images/svg/crypto-icons/xsg.svg'),
               name: 'Goldfinch Network',
               category: 'Blockchain Services',
               amount: '$42,50,000 / $30,84,214',
@@ -78,16 +78,82 @@ export default {
             },
           ]
         },
+   
         // {
-        //   title: 'Ended ICOs',
+        //   title: 'Upcoming ICOs',
         //   icos: [
-        //     // List of ended ICOs
+        //     // List of upcoming ICOs
         //     // Example:
-        //     // { name: 'Social Chain', category: 'Blockchain Services', ... },
-        //     // { name: 'Angels Crypto', category: 'Blockchain Services', ... },
-        //     // Add more ended ICOs as needed
+        //     // { name: 'World Doin', category: 'Blockchain Services', ... },
+        //     // { name: 'Bridge Plus', category: 'Platform', ... },
+        //     // Add more upcoming ICOs as needed
         //   ]
         // },
+        // {
+        //   title: 'Trading ICOs',
+        //   icos: [
+        //     // List of trading ICOs
+        //     // Example:
+        //     // { name: 'PowerCoin', category: 'Blockchain Services', ... },
+        //     // { name: 'Cyber Wonder', category: 'Platform', ... },
+        //     // Add more trading ICOs as needed
+        //   ]
+        // },
+      ],
+      endediconData: [
+             {
+          title: 'Ended ICOs',
+          endedicos: [
+            // List of ended ICOs
+            // Example:
+            // { name: 'Social Chain', category: 'Blockchain Services', ... },
+            // @/assets/images/svg/crypto-icons/bela.svg
+            // { name: 'Angels Crypto', category: 'Blockchain Services', ... },
+            // Add more ended ICOs as needed
+            {
+              icon: require('@/assets/images/svg/crypto-icons/bela.svg'),
+              name: 'Social Chain',
+              category: 'Blockchain Services',
+              amount: '$15,00,000 / $13,75,954',
+              percentage: '89.97%',
+              stars: '4.8',
+              days: '05 Days',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Angels Crypto',
+              category: 'Blockchain Services',
+              amount: '$39,00,000 / $31,57,654',
+              percentage: '84.57%',
+              stars: '4.4',
+              days: '15 Days',
+              visited: 'Visit Website',
+            },
+            {
+              icon:  require('@/assets/images/svg/crypto-icons/arn.svg'),
+              name: 'Manta Network Finance',
+              category: 'Finance Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/cs.svg'),
+              name: 'Goldfinch Network',
+              category: 'Blockchain Services',
+              amount: '$42,50,000 / $30,84,214',
+              percentage: '70.24%',
+              stars: '2.7',
+              days: '25 Jan, 2022',
+              visited: 'Visit Website',
+            },
+
+
+          ]
+        },
+   
         // {
         //   title: 'Upcoming ICOs',
         //   icos: [
@@ -304,7 +370,63 @@ export default {
         </b-card>
       </b-col>
 
-      <b-col xxl="3" md="6">
+
+
+      <b-col xxl="3" md="6" v-for="(group, index) in endediconData" :key="index">
+        <b-card no-body class="overflow-hidden">
+          <b-card-body class="bg-soft-success">
+            <h5 class="fs-17 text-center mb-0">{{ group.title }}</h5>
+          </b-card-body>
+        </b-card>
+        <b-card no-body class="mb-2" v-for="(ico, i) in group.endedicos" :key="i">
+         <b-card-body>
+           <div class="d-flex mb-3">
+             <div class="flex-shrink-0 avatar-sm">
+               <div class="avatar-title bg-light rounded">
+                 <img :src="ico.icon" alt="" class="avatar-xxs" />
+               </div>
+             </div>
+             <div class="flex-grow-1 ms-3">
+               <h5 class="fs-15 mb-1">{{ ico.name }}</h5>
+               <p class="text-muted mb-2">{{ ico.category }}</p>
+             </div>
+             <div>
+               <b-link v-if="ico && ico.visited" href="javascript:void(0);" class="badge badge-soft-primary">{{ ico.visited }}
+                 <i class="ri-arrow-right-up-line align-bottom"></i>
+               </b-link>
+             </div>
+           </div>
+           <h6 class="text-muted mb-0">
+             {{ ico.amount }}
+             <b-badge variant="soft-success" class="badge-soft-success">{{ ico.percentage }}</b-badge>
+           </h6>
+         </b-card-body>
+         <b-card-body class="border-top border-top-dashed">
+           <div class="d-flex">
+             <div class="flex-grow-1">
+               <h6 class="mb-0">
+                 {{ ico.stars }} <i class="ri-star-fill align-bottom text-warning"></i>
+               </h6>
+             </div>
+             <h6 class="flex-shrink-0 text-danger mb-0">
+               <i class="ri-time-line align-bottom"></i> {{ ico.days }}
+             </h6>
+           </div>
+         </b-card-body>
+         <div class='d-flex align-items-center justify-content-between m-1'>
+            <!-- Button for editing data -->
+            <button class="btn btn-outline-warning" >
+              <i class="ri-edit-line"></i> Edit
+            </button>
+            <!-- Button for adding data -->
+            <button class="btn btn-outline-danger" >
+              <i class="ri-delete-bin-line"></i> Delete
+            </button>
+         </div>
+        </b-card>
+      </b-col>
+
+      <!-- <b-col xxl="3" md="6">
         <b-card no-body class="overflow-hidden">
           <b-card-body class="bg-soft-danger">
             <h5 class="fs-17 text-center mb-0">Ended ICOs</h5>
@@ -418,7 +540,7 @@ export default {
             </div>
           </b-card-body>
         </b-card>
-      </b-col>
+      </b-col> -->
 
       <b-col xxl="3" md="6">
         <b-card no-body class="overflow-hidden">
