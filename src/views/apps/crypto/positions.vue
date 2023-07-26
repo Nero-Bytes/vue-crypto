@@ -1,5 +1,5 @@
 <script>
-// import Multiselect from "@vueform/multiselect";
+import Multiselect from "@vueform/multiselect";
 import "@vueform/multiselect/themes/default.css";
 
 // import { CountTo } from "vue3-count-to";
@@ -28,7 +28,7 @@ export default {
     // Swiper,
     // SwiperSlide,
     lottie: Lottie,
-    // Multiselect
+    Multiselect
   },
   page: {
     title: "Positions",
@@ -356,7 +356,7 @@ export default {
 
     </b-row>
 
-    <b-row class="align-items-center mb-4 g-3">
+ <b-row class="align-items-center mb-4 g-3">
       <b-col sm="3">
         <div class="d-flex align-items-center gap-2">
           <span class="text-muted flex-shrink-0">Sort by: </span>
