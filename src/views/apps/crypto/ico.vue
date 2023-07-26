@@ -13,6 +13,11 @@ export default {
     title: "Strategies",
     meta: [{ name: "description", content: appConfig.description }],
   },
+  computed: {
+    isAdmin() {
+      return this.$route.path.includes('/admin');
+    },
+  },
   data() {
     return {
       title: "Strategies",
@@ -38,7 +43,7 @@ export default {
           title: 'Active ICOs',
           icos: [
             {
-              icon: '/assets/images/svg/crypto-icons/btc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/btc.svg'),
               name: 'Data Wallet',
               category: 'Blockchain Services',
               amount: '$15,00,000 / $13,75,954',
@@ -47,7 +52,7 @@ export default {
               days: '05 Days',
             },
             {
-              icon: '/assets/images/companies/img-6.png',
+              icon: require('@/assets/images/companies/img-6.png'),
               name: 'GreatRiver Technology',
               category: 'Information Technology',
               amount: '$39,00,000 / $31,57,654',
@@ -57,7 +62,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/vtc.svg',
+              icon: require('@/assets/images/svg/crypto-icons/vtc.svg'),
               name: 'Manta Network Finance',
               category: 'Finance Services',
               amount: '$42,50,000 / $30,84,214',
@@ -67,7 +72,7 @@ export default {
               visited: 'Visit Website',
             },
             {
-              icon: '/assets/images/svg/crypto-icons/xsg.svg',
+              icon: require('@/assets/images/svg/crypto-icons/xsg.svg'),
               name: 'Goldfinch Network',
               category: 'Blockchain Services',
               amount: '$42,50,000 / $30,84,214',
@@ -88,16 +93,31 @@ export default {
         //     // Add more ended ICOs as needed
         //   ]
         // },
-        // {
-        //   title: 'Upcoming ICOs',
-        //   icos: [
-        //     // List of upcoming ICOs
-        //     // Example:
-        //     // { name: 'World Doin', category: 'Blockchain Services', ... },
-        //     // { name: 'Bridge Plus', category: 'Platform', ... },
-        //     // Add more upcoming ICOs as needed
-        //   ]
-        // },
+        {
+          title: 'Upcoming ICOs',
+          icos: [
+            {
+              icon: require('@/assets/images/svg/crypto-icons/add.svg'),
+              name: 'World Doin',
+              category: 'Blockchain Services',
+              amount: '$64,00,000',
+              percentage: '70.24%',
+              stars: '3.7',
+              days: '15 Jan, 2022',
+              visited: 'Visit Website',
+            },
+            {
+              icon: require('@/assets/images/svg/crypto-icons/atm.svg'),
+              name: 'Bridge Plus',
+              category: 'Platform',
+              amount: '$45,80,000',
+              percentage: '30.24%',
+              stars: '3.5',
+              days: '15 Mar, 2021',
+              visited: 'Visit Website',
+            },
+          ]
+        },
         // {
         //   title: 'Trading ICOs',
         //   icos: [
@@ -243,7 +263,7 @@ export default {
     </b-card>
 
     <b-row>
-      <b-col md="12">
+      <b-col md="12" v-if="isAdmin">
         <div class="d-flex mb-2">
           <button class="btn btn-success" >
             <i class="ri-add-line"></i> Add ICOs
@@ -291,7 +311,7 @@ export default {
              </h6>
            </div>
          </b-card-body>
-         <div class='d-flex align-items-center justify-content-between m-1'>
+         <div v-if="isAdmin" class='d-flex align-items-center justify-content-between m-1'>
             <!-- Button for editing data -->
             <button class="btn btn-outline-warning" >
               <i class="ri-edit-line"></i> Edit
@@ -301,358 +321,6 @@ export default {
               <i class="ri-delete-bin-line"></i> Delete
             </button>
          </div>
-        </b-card>
-      </b-col>
-
-      <b-col xxl="3" md="6">
-        <b-card no-body class="overflow-hidden">
-          <b-card-body class="bg-soft-danger">
-            <h5 class="fs-17 text-center mb-0">Ended ICOs</h5>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/bela.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Social Chain</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $14,00,000 / $13,20,471
-              <b-badge variant="soft-success" class="badge-soft-success">97.62%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  2.8 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-muted mb-0">
-                <i class="ri-time-line align-bottom"></i> 02 Jan, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/arn.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Angels Crypto</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $75,00,000 / $59,10,412
-              <b-badge variant="soft-success" class="badge-soft-success">89.13%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  2.1 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-muted mb-0">
-                <i class="ri-time-line align-bottom"></i> 23 Dec, 2021
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/cs.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Codex Exchange</h5>
-                <p class="text-muted mb-2">Exchange</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $32,00,000 / $28,65,732
-              <b-badge variant="soft-success" class="badge-soft-success">78.43%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.0 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-muted mb-0">
-                <i class="ri-time-line align-bottom"></i> 04 Oct, 2021
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-
-      <b-col xxl="3" md="6">
-        <b-card no-body class="overflow-hidden">
-          <b-card-body class="bg-soft-primary">
-            <h5 class="fs-17 text-center mb-0">Upcoming ICOs</h5>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2">
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/add.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">World Doin</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">$64,00,000</h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  4.7 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-primary mb-0">
-                <i class="ri-time-line align-bottom"></i> 15 Jan, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/atm.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Bridge Plus</h5>
-                <p class="text-muted mb-2">Platform</p>
-              </div>
-              <div>
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">$45,80,000</h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.5 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-muted mb-0">-</h6>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-
-      <b-col xxl="3" md="6">
-        <b-card no-body class="overflow-hidden">
-          <b-card-body class="bg-soft-info">
-            <h5 class="fs-17 text-center mb-0">Trading ICOs</h5>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2 ribbon-box ribbon-fill right">
-          <div class="ribbon ribbon-info shadow-none">
-            <i class="ri-flashlight-fill me-1"></i> 1
-          </div>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/bcbc.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">PowerCoin</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div class="me-4">
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $1,50,00,000 / $1,11,65,368
-              <b-badge variant="soft-success" class="badge-soft-success">86.61%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  4.9 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 16 Feb, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2 ribbon-box ribbon-fill right">
-          <div class="ribbon ribbon-info shadow-none">
-            <i class="ri-flashlight-fill me-1"></i> 2
-          </div>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/bix.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Cyber Wonder</h5>
-                <p class="text-muted mb-2">Platform</p>
-              </div>
-              <div class="me-4">
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $80,00,000 / $36,40,352
-              <b-badge variant="soft-success" class="badge-soft-success">48.08%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  4.7 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 23 Jan, 2022
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="mb-2 ribbon-box ribbon-fill right">
-          <div class="ribbon ribbon-info shadow-none">
-            <i class="ri-flashlight-fill me-1"></i> 3
-          </div>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/rise.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">RootCoin</h5>
-                <p class="text-muted mb-2">Blockchain Services</p>
-              </div>
-              <div class="me-4">
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $95,00,000 / $78,95,041
-              <b-badge variant="soft-success" class="badge-soft-success">76.05%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.2 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 30 Dec, 2021
-              </h6>
-            </div>
-          </b-card-body>
-        </b-card>
-        <b-card no-body class="ribbon-box ribbon-fill right">
-          <div class="ribbon ribbon-info shadow-none">
-            <i class="ri-flashlight-fill me-1"></i> 4
-          </div>
-          <b-card-body>
-            <div class="d-flex mb-3">
-              <div class="flex-shrink-0 avatar-sm">
-                <div class="avatar-title bg-light rounded">
-                  <img src="@/assets/images/svg/crypto-icons/ark.svg" alt="" class="avatar-xxs" />
-                </div>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="fs-15 mb-1">Arcana Finance</h5>
-                <p class="text-muted mb-2">Finance Services</p>
-              </div>
-              <div class="me-4">
-                <b-link href="javascript:void(0);" class="badge badge-soft-primary">Visit Website
-                  <i class="ri-arrow-right-up-line align-bottom"></i>
-                </b-link>
-              </div>
-            </div>
-            <h6 class="text-muted mb-0">
-              $68,00,000 / $45,85,367
-              <b-badge variant="soft-success" class="badge-soft-success">71.16%</b-badge>
-            </h6>
-          </b-card-body>
-          <b-card-body class="border-top border-top-dashed">
-            <div class="d-flex">
-              <div class="flex-grow-1">
-                <h6 class="mb-0">
-                  3.2 <i class="ri-star-fill align-bottom text-warning"></i>
-                </h6>
-              </div>
-              <h6 class="flex-shrink-0 text-warning mb-0">
-                <i class="ri-time-line align-bottom"></i> 02 Dec, 2021
-              </h6>
-            </div>
-          </b-card-body>
         </b-card>
       </b-col>
     </b-row>
