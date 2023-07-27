@@ -37,7 +37,7 @@ export default {
       value: null,
       value2: null,
       showDashboard: true,
-      showOrder: false,
+      showBrokerPosition: false,
       chartcolors: {
         colors: ["#f17171"],
       },
@@ -603,160 +603,6 @@ export default {
           status: "Successful",
           statusClass: "success",
         },
-        {
-          id: 2,
-          date: ["27 Dec, 2021", "02:47PM"],
-          img: require("@/assets/images/svg/crypto-icons/eth.svg"),
-          coinName: "Ethereum (ETH)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "50",
-          orderValue: "$1,87,433",
-          avgPrice: "$3,744.48",
-          price: "$3,748.66",
-          status: "Cancelled",
-          statusClass: "danger",
-        },
-        {
-          id: 3,
-          date: ["19 Dec, 2021", "10:24AM"],
-          img: require("@/assets/images/svg/crypto-icons/xmr.svg"),
-          coinName: "Monero (XMR)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "150",
-          orderValue: "$33,982.5",
-          avgPrice: "$227.30",
-          price: "$226.55",
-          status: "Successful",
-          statusClass: "success",
-        },
-        {
-          id: 4,
-          date: ["19 Dec, 2021", "11:20AM"],
-          img: require("@/assets/images/svg/crypto-icons/mkr.svg"),
-          coinName: "Maker (MKR)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "60",
-          orderValue: "$1,43,445",
-          avgPrice: "$2,470.30",
-          price: "$2,390.75",
-          status: "Pending",
-          statusClass: "warning",
-        },
-        {
-          id: 5,
-          date: ["11 Dec, 2021", "02:47PM"],
-          img: require("@/assets/images/svg/crypto-icons/yfi.svg"),
-          coinName: "Yearn.finance (YFI)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "25",
-          orderValue: "$9,81,906",
-          avgPrice: "$37,632.17",
-          price: "$39,276.24",
-          status: "Cancelled",
-          statusClass: "danger",
-        },
-        {
-          id: 6,
-          date: ["05 Dec, 2021", "09:20AM"],
-          img: require("@/assets/images/svg/crypto-icons/mkr.svg"),
-          coinName: "Maker (MKR)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "20",
-          orderValue: "$50,243",
-          avgPrice: "$2,324.65",
-          price: "$2,512.15",
-          status: "Successful",
-          statusClass: "success",
-        },
-        {
-          id: 7,
-          date: ["28 Nov, 2021", "11:42AM"],
-          img: require("@/assets/images/svg/crypto-icons/ltc.svg"),
-          coinName: "Litecoin (LTC)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "200",
-          orderValue: "$29,500",
-          avgPrice: "$144.00",
-          price: "$147.50",
-          status: "Pending",
-          statusClass: "warning",
-        },
-        {
-          id: 8,
-          date: ["19 Nov, 2021", "03:36PM"],
-          img: require("@/assets/images/svg/crypto-icons/xmr.svg"),
-          coinName: "Monero (XMR)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "75",
-          orderValue: "$17,874",
-          avgPrice: "$221.61",
-          price: "$238.32",
-          status: "Successful",
-          statusClass: "success",
-        },
-        {
-          id: 9,
-          date: ["27 Oct, 2021", "03:36PM"],
-          img: require("@/assets/images/svg/crypto-icons/dash.svg"),
-          coinName: "Dash (DASH)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "45",
-          orderValue: "$14,962.5",
-          avgPrice: "$147.39",
-          price: "$142.5",
-          status: "Cancelled",
-          statusClass: "danger",
-        },
-        {
-          id: 10,
-          date: ["27 Oct, 2021", "03:36PM"],
-          img: require("@/assets/images/svg/crypto-icons/neo.svg"),
-          coinName: "Neo (NEO)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "36",
-          orderValue: "$77,232.24",
-          avgPrice: "$2,274.21",
-          price: "$2,145.34",
-          status: "Pending",
-          statusClass: "warning",
-        },
-        {
-          id: 11,
-          date: ["21 Oct, 2021", "11:45AM"],
-          img: require("@/assets/images/svg/crypto-icons/mln.svg"),
-          coinName: "Enzyme (MLN)",
-          type: "Sell",
-          typeClass: "danger",
-          quantity: "68",
-          orderValue: "$6,296.8",
-          avgPrice: "$94.21",
-          price: "$92.60",
-          status: "Successful",
-          statusClass: "success",
-        },
-        {
-          id: 12,
-          date: ["24 Sep, 2021", "02:32AM"],
-          img: require("@/assets/images/svg/crypto-icons/eth.svg"),
-          coinName: "Ethereum (ETH)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "72",
-          orderValue: "$2,69,602.56",
-          avgPrice: "$3,744.48",
-          price: "$3,748.66",
-          status: "Cancelled",
-          statusClass: "danger",
-        },
       ],
       date: null,
       date2: null,
@@ -868,11 +714,11 @@ export default {
   methods: {
     showDashboardComponent() {
       this.showDashboard = true;
-      this.showOrder = false;
+      this.showBrokerPosition = false;
     },
-    showOrderComponent() {
+    showBrokerPositionComponent() {
       this.showDashboard = false;
-      this.showOrder = true;
+      this.showBrokerPosition = true;
     },
     dateSort(inputArray) {
       return inputArray.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -957,271 +803,21 @@ export default {
               <div class="btn btn-info" @click="showDashboardComponent">
                 <i class="ri-dashboard-line"></i>
               </div>
-              <div class="btn btn-info" @click="showOrderComponent">
+              <div class="btn btn-info" @click="showBrokerPositionComponent">
                 <i class="ri-coin-line"></i>
               </div>
-            </div>
-            <!-- <PositionTable /> -->
-            <!-- <MarketGraph /> -->
-            <!-- position table content here start -->
-
-            <div v-if="showDashboard">
-              <b-row class="align-items-center mb-4 g-3">
-                <b-col sm="3">
-                  <div class="d-flex align-items-center gap-2">
-                    <span class="text-muted flex-shrink-0">Sort by: </span>
-
-                    <Multiselect
-                      class="form-control"
-                      v-model="value2"
-                      :close-on-select="true"
-                      :searchable="true"
-                      :create-option="true"
-                      :options="[
-                        { value: 'All', label: 'All' },
-                        { value: 'USD', label: 'USD' },
-                        { value: 'ETH', label: 'ETH' },
-                        { value: 'BTC', label: 'BTC' },
-                        { value: 'EUR', label: 'EUR' },
-                        { value: 'JPY', label: 'JPY' },
-                      ]"
-                    />
-                  </div>
-                </b-col>
-                <b-col sm="auto" class="ms-auto">
-                  <div class="d-flex gap-2">
-                    <b-link href="javascript:void(0);" class="btn btn-info"
-                      >Deposite</b-link
-                    >
-                    <b-link href="javascript:void(0);" class="btn btn-danger"
-                      >Withdraw</b-link
-                    >
-                  </div>
-                </b-col>
-              </b-row>
-
-              <b-card no-body id="contactList">
-                <b-card-header>
-                  <b-row class="align-items-center g-3">
-                    <b-col md="3">
-                      <h5 class="card-title mb-0">All Positions</h5>
-                    </b-col>
-                    <b-col md="auto" class="ms-auto">
-                      <div class="d-flex gap-2">
-                        <div class="search-box">
-                          <input
-                            type="text"
-                            class="form-control search"
-                            placeholder="Search for transactions..."
-                            v-model="searchQuery"
-                          />
-                          <i class="ri-search-line search-icon"></i>
-                        </div>
-                        <b-button variant="success">
-                          <i class="ri-equalizer-line align-bottom me-1"></i>
-                          Filters
-                        </b-button>
-                      </div>
-                    </b-col>
-                  </b-row>
-                </b-card-header>
-                <b-card-body>
-                  <div class="table-responsive table-card">
-                    <table
-                      class="table align-middle table-nowrap"
-                      id="customerTable"
-                    >
-                      <thead class="table-light text-muted">
-                        <tr>
-                          <th
-                            class="sort"
-                            data-sort="name"
-                            scope="col"
-                            style="width: 60px"
-                          ></th>
-                          <th class="sort" data-sort="date" scope="col">
-                            Timestamp
-                          </th>
-                          <th
-                            class="sort"
-                            data-sort="currency_name"
-                            scope="col"
-                          >
-                            Currency
-                          </th>
-                          <th class="sort" data-sort="form_name" scope="col">
-                            Form
-                          </th>
-                          <th class="sort" data-sort="to_name" scope="col">
-                            To
-                          </th>
-                          <th class="sort" data-sort="details" scope="col">
-                            Details
-                          </th>
-                          <th
-                            class="sort"
-                            data-sort="transaction_id"
-                            scope="col"
-                          >
-                            Transaction ID
-                          </th>
-                          <th class="sort" data-sort="type" scope="col">
-                            Type
-                          </th>
-                          <th class="sort" data-sort="amount" scope="col">
-                            Amount
-                          </th>
-                          <th class="sort" data-sort="status" scope="col">
-                            Status
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="list form-check-all">
-                        <tr v-for="(data, index) of resultQuery" :key="index">
-                          <td class="id" style="display: none">
-                            <b-link
-                              href="javascript:void(0);"
-                              class="fw-medium link-primary"
-                              >#VZ001</b-link
-                            >
-                          </td>
-                          <td>
-                            <div class="avatar-xs">
-                              <div
-                                class="avatar-title rounded-circle fs-16"
-                                :class="{
-                                  'text-success bg-soft-success':
-                                    data.icon == 'ri-arrow-left-down-fill',
-                                  'bg-soft-danger text-danger':
-                                    data.icon == 'ri-arrow-right-up-fill',
-                                }"
-                              >
-                                <i :class="data.icon"></i>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="date">
-                            {{ data.date }}
-                            <small class="text-muted">{{ data.time }}</small>
-                          </td>
-                          <td class="currency_name">
-                            <div class="d-flex align-items-center">
-                              <img
-                                :src="data.image"
-                                alt=""
-                                class="avatar-xxs me-2"
-                              />
-                              {{ data.currency }}
-                            </div>
-                          </td>
-                          <td class="form_name">{{ data.from }}</td>
-                          <td class="to_name">{{ data.to }}</td>
-                          <td class="details">{{ data.details }}</td>
-                          <td class="transaction_id">{{ data.id }}</td>
-                          <td class="type">{{ data.type }}</td>
-                          <td>
-                            <h6
-                              class="mb-1 amount"
-                              :class="{
-                                'text-success':
-                                  data.icon == 'ri-arrow-left-down-fill',
-                                'text-danger':
-                                  data.icon == 'ri-arrow-right-up-fill',
-                              }"
-                            >
-                              {{ data.amount }}
-                            </h6>
-                            <p class="text-muted mb-0">{{ data.amount1 }}</p>
-                          </td>
-                          <td class="status">
-                            <span
-                              class="badge fs-11"
-                              :class="{
-                                'badge-soft-success': data.status == 'Success',
-                                'badge-soft-danger': data.status == 'Failed',
-                                'badge-soft-warning':
-                                  data.status == 'Processing',
-                              }"
-                              ><i class="ri-time-line align-bottom"></i>
-                              {{ data.status }}</span
-                            >
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div class="noresult" style="display: none">
-                      <div class="text-center">
-                        <lottie
-                          colors="primary:#121331,secondary:#08a88a"
-                          :options="defaultOptions2"
-                          :height="75"
-                          :width="75"
-                        />
-                        <h5 class="mt-2">Sorry! No Result Found</h5>
-                        <p class="text-muted mb-0">
-                          We've searched more than 150+ transactions We did not
-                          find any transactions for you search.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-end mt-3">
-                    <div
-                      class="pagination-wrap hstack gap-2"
-                      style="display: flex"
-                    >
-                      <b-link
-                        class="page-item pagination-prev"
-                        :class="{ disabled: page == 1 }"
-                        v-if="page != 1"
-                        href="#"
-                        @click="page--"
-                      >
-                        Previous
-                      </b-link>
-                      <ul class="pagination listjs-pagination mb-0">
-                        <li
-                          :class="{
-                            active: pageNumber == page,
-                            disabled: pageNumber == '...',
-                          }"
-                          v-for="(pageNumber, index) in pages"
-                          :key="index"
-                          @click="page = pageNumber"
-                        >
-                          <b-link
-                            class="page"
-                            href="#"
-                            data-i="1"
-                            data-page="8"
-                            >{{ pageNumber }}</b-link
-                          >
-                        </li>
-                      </ul>
-                      <b-link
-                        class="page-item pagination-next"
-                        href="#"
-                        @click="page++"
-                        v-if="page < pages.length"
-                      >
-                        Next
-                      </b-link>
-                    </div>
-                  </div>
-                </b-card-body>
-              </b-card>
             </div>
 
             <!-- position table content End here -->
             <!-- Order table Start -->
-            <div v-if="showOrder">
+            <div v-if="showDashboard">
               <b-card no-body>
                 <b-card-header class="d-flex align-items-center border-0">
-                  <h5 class="card-title mb-0 flex-grow-1">All Orders</h5>
+                  <h5 class="card-title mb-0 flex-grow-1">All Order</h5>
                   <div class="flex-shrink-0">
                     <div class="flax-shrink-0 hstack gap-2">
-                      <b-button variant="primary">Today's Orders</b-button>
-                      <b-button variant="soft-info">Past Orders</b-button>
+                      <b-button variant="primary">Today's Order</b-button>
+                      <b-button variant="soft-info">Past Order</b-button>
                     </div>
                   </div>
                 </b-card-header>
@@ -1469,6 +1065,256 @@ export default {
               </b-card>
             </div>
             <!-- Order table End -->
+            <!-- <PositionTable /> -->
+            <!-- <MarketGraph /> -->
+            <!-- position table content here start -->
+
+            <div v-if="showBrokerPosition">
+              <b-row class="align-items-center mb-4 g-3">
+                <b-col sm="3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="text-muted flex-shrink-0">Sort by: </span>
+
+                    <Multiselect
+                      class="form-control"
+                      v-model="value2"
+                      :close-on-select="true"
+                      :searchable="true"
+                      :create-option="true"
+                      :options="[
+                        { value: 'All', label: 'All' },
+                        { value: 'USD', label: 'USD' },
+                        { value: 'ETH', label: 'ETH' },
+                        { value: 'BTC', label: 'BTC' },
+                        { value: 'EUR', label: 'EUR' },
+                        { value: 'JPY', label: 'JPY' },
+                      ]"
+                    />
+                  </div>
+                </b-col>
+                <b-col sm="auto" class="ms-auto">
+                  <div class="d-flex gap-2">
+                    <b-link href="javascript:void(0);" class="btn btn-info"
+                      >Deposite</b-link
+                    >
+                    <b-link href="javascript:void(0);" class="btn btn-danger"
+                      >Withdraw</b-link
+                    >
+                  </div>
+                </b-col>
+              </b-row>
+
+              <b-card no-body id="contactList">
+                <b-card-header>
+                  <b-row class="align-items-center g-3">
+                    <b-col md="3">
+                      <h5 class="card-title mb-0">All Broker Positions</h5>
+                    </b-col>
+                    <b-col md="auto" class="ms-auto">
+                      <div class="d-flex gap-2">
+                        <div class="search-box">
+                          <input
+                            type="text"
+                            class="form-control search"
+                            placeholder="Search for transactions..."
+                            v-model="searchQuery"
+                          />
+                          <i class="ri-search-line search-icon"></i>
+                        </div>
+                        <b-button variant="success">
+                          <i class="ri-equalizer-line align-bottom me-1"></i>
+                          Filters
+                        </b-button>
+                      </div>
+                    </b-col>
+                  </b-row>
+                </b-card-header>
+                <b-card-body>
+                  <div class="table-responsive table-card">
+                    <table
+                      class="table align-middle table-nowrap"
+                      id="customerTable"
+                    >
+                      <thead class="table-light text-muted">
+                        <tr>
+                          <th
+                            class="sort"
+                            data-sort="name"
+                            scope="col"
+                            style="width: 60px"
+                          ></th>
+                          <th class="sort" data-sort="date" scope="col">
+                            Timestamp
+                          </th>
+                          <th
+                            class="sort"
+                            data-sort="currency_name"
+                            scope="col"
+                          >
+                            Currency
+                          </th>
+                          <th class="sort" data-sort="form_name" scope="col">
+                            Form
+                          </th>
+                          <th class="sort" data-sort="to_name" scope="col">
+                            To
+                          </th>
+                          <th class="sort" data-sort="details" scope="col">
+                            Details
+                          </th>
+                          <th
+                            class="sort"
+                            data-sort="transaction_id"
+                            scope="col"
+                          >
+                            Transaction ID
+                          </th>
+                          <th class="sort" data-sort="type" scope="col">
+                            Type
+                          </th>
+                          <th class="sort" data-sort="amount" scope="col">
+                            Amount
+                          </th>
+                          <th class="sort" data-sort="status" scope="col">
+                            Status
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list form-check-all">
+                        <tr v-for="(data, index) of resultQuery" :key="index">
+                          <td class="id" style="display: none">
+                            <b-link
+                              href="javascript:void(0);"
+                              class="fw-medium link-primary"
+                              >#VZ001</b-link
+                            >
+                          </td>
+                          <td>
+                            <div class="avatar-xs">
+                              <div
+                                class="avatar-title rounded-circle fs-16"
+                                :class="{
+                                  'text-success bg-soft-success':
+                                    data.icon == 'ri-arrow-left-down-fill',
+                                  'bg-soft-danger text-danger':
+                                    data.icon == 'ri-arrow-right-up-fill',
+                                }"
+                              >
+                                <i :class="data.icon"></i>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="date">
+                            {{ data.date }}
+                            <small class="text-muted">{{ data.time }}</small>
+                          </td>
+                          <td class="currency_name">
+                            <div class="d-flex align-items-center">
+                              <img
+                                :src="data.image"
+                                alt=""
+                                class="avatar-xxs me-2"
+                              />
+                              {{ data.currency }}
+                            </div>
+                          </td>
+                          <td class="form_name">{{ data.from }}</td>
+                          <td class="to_name">{{ data.to }}</td>
+                          <td class="details">{{ data.details }}</td>
+                          <td class="transaction_id">{{ data.id }}</td>
+                          <td class="type">{{ data.type }}</td>
+                          <td>
+                            <h6
+                              class="mb-1 amount"
+                              :class="{
+                                'text-success':
+                                  data.icon == 'ri-arrow-left-down-fill',
+                                'text-danger':
+                                  data.icon == 'ri-arrow-right-up-fill',
+                              }"
+                            >
+                              {{ data.amount }}
+                            </h6>
+                            <p class="text-muted mb-0">{{ data.amount1 }}</p>
+                          </td>
+                          <td class="status">
+                            <span
+                              class="badge fs-11"
+                              :class="{
+                                'badge-soft-success': data.status == 'Success',
+                                'badge-soft-danger': data.status == 'Failed',
+                                'badge-soft-warning':
+                                  data.status == 'Processing',
+                              }"
+                              ><i class="ri-time-line align-bottom"></i>
+                              {{ data.status }}</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="noresult" style="display: none">
+                      <div class="text-center">
+                        <lottie
+                          colors="primary:#121331,secondary:#08a88a"
+                          :options="defaultOptions2"
+                          :height="75"
+                          :width="75"
+                        />
+                        <h5 class="mt-2">Sorry! No Result Found</h5>
+                        <p class="text-muted mb-0">
+                          We've searched more than 150+ transactions We did not
+                          find any transactions for you search.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end mt-3">
+                    <div
+                      class="pagination-wrap hstack gap-2"
+                      style="display: flex"
+                    >
+                      <b-link
+                        class="page-item pagination-prev"
+                        :class="{ disabled: page == 1 }"
+                        v-if="page != 1"
+                        href="#"
+                        @click="page--"
+                      >
+                        Previous
+                      </b-link>
+                      <ul class="pagination listjs-pagination mb-0">
+                        <li
+                          :class="{
+                            active: pageNumber == page,
+                            disabled: pageNumber == '...',
+                          }"
+                          v-for="(pageNumber, index) in pages"
+                          :key="index"
+                          @click="page = pageNumber"
+                        >
+                          <b-link
+                            class="page"
+                            href="#"
+                            data-i="1"
+                            data-page="8"
+                            >{{ pageNumber }}</b-link
+                          >
+                        </li>
+                      </ul>
+                      <b-link
+                        class="page-item pagination-next"
+                        href="#"
+                        @click="page++"
+                        v-if="page < pages.length"
+                      >
+                        Next
+                      </b-link>
+                    </div>
+                  </div>
+                </b-card-body>
+              </b-card>
+            </div>
           </b-col>
         </b-row>
       </b-col>
