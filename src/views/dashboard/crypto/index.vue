@@ -591,18 +591,96 @@ export default {
       posts: [
         {
           id: 1,
-          date: ["02 Jan, 2022", "03:45PM"],
-          img: require("@/assets/images/svg/crypto-icons/btc.svg"),
-          coinName: "Bitcoin (BTC)",
-          type: "Buy",
-          typeClass: "success",
-          quantity: "08",
-          orderValue: "$3,70,683.2",
-          avgPrice: "$46,154.30",
-          price: "$46,335.40",
-          status: "Successful",
-          statusClass: "success",
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
         },
+        {
+          id: 2,
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
+        },
+        {
+          id: 3,
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
+        },
+        {
+          id: 4,
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
+        },
+        {
+          id: 5,
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
+        },
+        {
+          id: 6,
+          group: "Secreat Group",
+          script: "NIFTY2371319500CE",
+          exchange: "NFO",
+          qty: "500",
+          entryTime: "10:57",
+          exitTime: "11:59",
+          entryPrice: "120.35",
+          exitPrice: "-125.35",
+          ltp: "+2500",
+          pnl: "SQOOFF",
+        },
+        // {
+        //   id: 1,
+        //   date: ["02 Jan, 2022", "03:45PM"],
+        //   img: require("@/assets/images/svg/crypto-icons/btc.svg"),
+        //   coinName: "Bitcoin (BTC)",
+        //   type: "Buy",
+        //   typeClass: "success",
+        //   quantity: "08",
+        //   orderValue: "$3,70,683.2",
+        //   avgPrice: "$46,154.30",
+        //   price: "$46,335.40",
+        //   status: "Successful",
+        //   statusClass: "success",
+        // },
       ],
       date: null,
       date2: null,
@@ -631,7 +709,7 @@ export default {
       return this.dateSort(this.transactions);
     },
     displayOrderPosts() {
-      return this.paginate(this.posts)
+      return this.paginate(this.posts);
     },
 
     displayedPosts() {
@@ -657,42 +735,42 @@ export default {
         return this.displayedPosts;
       }
     },
-    orderResultQuery() {
-      if (this.searchQuery) {
-        const search = this.searchQuery.toLowerCase();
-        return this.displayOrderPosts.filter((data) => {
-          return (
-            data.coinName.toLowerCase().includes(search) ||
-            data.date[0].toLowerCase().includes(search) ||
-            data.date[1].toLowerCase().includes(search) ||
-            data.type.toLowerCase().includes(search) ||
-            data.quantity.toLowerCase().includes(search) ||
-            data.orderValue.toLowerCase().includes(search) ||
-            data.avgPrice.toLowerCase().includes(search) ||
-            data.price.toLowerCase().includes(search) ||
-            data.status.toLowerCase().includes(search)
-          );
-        });
-      } else if (this.status !== null || this.value !== null) {
-        return this.displayOrderPosts.filter((data) => {
-          if (this.status != null && this.value != null) {
-            if (this.status === data.status) {
-              if (this.value === data.type) {
-                return data;
-              }
-            }
-          } else if (this.status === data.status) {
-            return data;
-          } else if (this.value === data.type) {
-            return data;
-          }
-          else {
-            return null;
-          }
-        });
-      } else {
-        return this.displayOrderPosts;
-      }
+    dashboardPositionQuery() {
+      // if (this.searchQuery) {
+      //   const search = this.searchQuery.toLowerCase();
+      //   return this.displayOrderPosts.filter((data) => {
+      //     return (
+      //       data.coinName.toLowerCase().includes(search) ||
+      //       data.date[0].toLowerCase().includes(search) ||
+      //       data.date[1].toLowerCase().includes(search) ||
+      //       data.type.toLowerCase().includes(search) ||
+      //       data.quantity.toLowerCase().includes(search) ||
+      //       data.orderValue.toLowerCase().includes(search) ||
+      //       data.avgPrice.toLowerCase().includes(search) ||
+      //       data.price.toLowerCase().includes(search) ||
+      //       data.status.toLowerCase().includes(search)
+      //     );
+      //   });
+      // } else if (this.status !== null || this.value !== null) {
+      //   return this.displayOrderPosts.filter((data) => {
+      //     if (this.status != null && this.value != null) {
+      //       if (this.status === data.status) {
+      //         if (this.value === data.type) {
+      //           return data;
+      //         }
+      //       }
+      //     } else if (this.status === data.status) {
+      //       return data;
+      //     } else if (this.value === data.type) {
+      //       return data;
+      //     }
+      //     else {
+      //       return null;
+      //     }
+      //   });
+      // } else {
+      //   }
+      return this.displayOrderPosts;
     },
   },
   watch: {
@@ -737,11 +815,11 @@ export default {
       let to = page * perPage;
       return transactions.slice(from, to);
     },
-    SearchData() {
-      this.orderResultQuery;
-      this.status = this.status1;
-      this.value = this.value2;
-    },
+    // SearchData() {
+    //   this.dashboardPositionQuery;
+    //   this.status = this.status1;
+    //   this.value = this.value2;
+    // },
   },
 };
 </script>
@@ -821,7 +899,7 @@ export default {
                     </div>
                   </div>
                 </b-card-header>
-                <b-card-body
+                <!-- <b-card-body
                   class="border border-dashed border-end-0 border-start-0"
                 >
                   <b-row class="g-2">
@@ -893,7 +971,7 @@ export default {
                       >
                     </b-col>
                   </b-row>
-                </b-card-body>
+                </b-card-body> -->
                 <b-card-body>
                   <div class="table-responsive table-card">
                     <table
@@ -903,99 +981,117 @@ export default {
                       <thead class="table-light text-muted">
                         <tr>
                           <th class="sort" data-sort="time" scope="col">
-                            Date
+                            Group Name
                           </th>
                           <th
                             class="sort"
                             data-sort="currency_name"
                             scope="col"
                           >
-                            Name
+                            Script
                           </th>
                           <th class="sort" data-sort="type" scope="col">
-                            Type
+                            Exchange
                           </th>
                           <th
                             class="sort"
                             data-sort="quantity_value"
                             scope="col"
                           >
-                            Quantity
+                            QTY
                           </th>
                           <th class="sort" data-sort="or_value" scope="col">
-                            Order Value
+                            Entry Time
+                          </th>
+                          <th class="sort" data-sort="or_value" scope="col">
+                            Exit Time
                           </th>
                           <th
                             class="sort"
                             data-sort="sort-avg_price"
                             scope="col"
                           >
-                            Avg Price
+                            Entry Price
                           </th>
-                          <th class="sort" data-sort="sort-price" scope="col">
-                            Price
+                          <th
+                            class="sort"
+                            data-sort="sort-avg_price"
+                            scope="col"
+                          >
+                            Exit Price
                           </th>
                           <th class="sort" data-sort="status" scope="col">
-                            Status
+                            ltp
+                          </th>
+                          <th class="sort" data-sort="status" scope="col">
+                            pnl
                           </th>
                         </tr>
                       </thead>
                       <tbody class="list form-check-all">
-                        <tr v-for="(data, index) of orderResultQuery" :key="index">
+                        <tr
+                          v-for="(data, index) of dashboardPositionQuery"
+                          :key="index"
+                        >
                           <td
                             class="order_date time"
                             data-timestamp="1641945600"
                           >
-                            {{ data.date[0] }}
-                            <small class="text-muted">{{ data.date[1] }}</small>
+                            {{ data.group }}
+                            <!-- <small class="text-muted">{{ data.date[1] }}</small> -->
                           </td>
-                          <td class="id" style="display: none">
+                          <!-- <td class="id" style="display: none">
                             <b-link
                               href="javascript:void(0);"
                               class="fw-medium link-primary"
                               >#VZ001</b-link
                             >
-                          </td>
+                          </td> -->
                           <td>
                             <div class="d-flex align-items-center">
-                              <div class="flex-shrink-0">
+                              <!-- <div class="flex-shrink-0">
                                 <img
                                   :src="data.img"
                                   alt=""
                                   class="avatar-xxs"
                                 />
-                              </div>
+                              </div> -->
                               <b-link
                                 href="javascript:void(0);"
                                 class="currency_name flex-grow-1 ms-2 currency_name"
-                                >{{ data.coinName }}</b-link
+                                >{{ data.script }}</b-link
                               >
                             </div>
                           </td>
                           <td :class="`type text-${data.typeClass}`">
-                            {{ data.type }}
+                            {{ data.exchange }}
                           </td>
-                          <td class="quantity_value">{{ data.quantity }}</td>
+                          <td class="quantity_value">{{ data.qty }}</td>
                           <td
                             class="order_value or_val"
                             data-orderval="370683.20"
                           >
-                            {{ data.orderValue }}
+                            {{ data.entryTime }}
                           </td>
                           <td
                             class="avg_price sort-avg_price"
                             data-av-price="46154.30"
                           >
-                            {{ data.avgPrice }}
+                            {{ data.exitTime }}
                           </td>
                           <td class="price sort-price" data-price="46335.40">
-                            {{ data.price }}
+                            {{ data.entryPrice }}
+                          </td>
+                          <td class="price sort-price" data-price="46335.40">
+                            {{ data.exitPrice }}
                           </td>
                           <td class="status">
-                            <span
-                              :class="`badge badge-soft-${data.statusClass} text-uppercase`"
-                              >{{ data.status }}</span
-                            >
+                            {{ data.ltp }}
+                          </td>
+                          <td>
+                            <button class="btn btn-info" type="button">
+                            {{ data.pnl }}
+                          </button>
                           </td>
                         </tr>
                       </tbody>
@@ -1003,7 +1099,7 @@ export default {
                     <div
                       class="noresult"
                       style="display: none"
-                      :class="{ 'd-block': orderResultQuery.length == 0 }"
+                      :class="{ 'd-block': dashboardPositionQuery.length == 0 }"
                     >
                       <div class="text-center">
                         <lottie
@@ -1025,7 +1121,7 @@ export default {
                   <div class="d-flex justify-content-end p-3">
                     <div
                       class="pagination-wrap hstack gap-2"
-                      v-if="page != 1 || orderResultQuery.length >= 10"
+                      v-if="page != 1 || dashboardPositionQuery.length >= 10"
                     >
                       <b-link
                         class="page-item pagination-prev"

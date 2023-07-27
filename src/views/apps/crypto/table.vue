@@ -90,7 +90,7 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl: 40,
+        pnl: "SQOOFF",
         ltp: 30,
         status:'CLOSED',
         company: "Force Medicines",
@@ -109,7 +109,7 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl: 35,
+        pnl: "SQOOFF",
         ltp: 40,
         status:'CLOSED',
         company: "iTest Factory",
@@ -128,7 +128,7 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl: 15,
+        pnl: "SQOOFF",
         ltp: 10,
         status:'CLOSED',
         company: "Syntyce Solutions",
@@ -148,7 +148,7 @@ export default {
         qty:50,
         entryprice:64.7,
         exitprice:0,
-        pnl: 25,
+        pnl: "SQOOFF",
         ltp: 20,
         status:'CLOSED',
         company: "Micro Design",
@@ -338,9 +338,9 @@ export default {
                       <th class="sort" data-sort="tags">QTY</th>
                       <th class="sort" data-sort="date">ENTRY PRICE</th>
                       <th class="sort" data-sort="action">EXIT PRICE</th>
-                      <th class="sort" data-sort="action">PNL</th>
                       <th class="sort" data-sort="action">LTP</th>
                       <th class="sort" data-sort="action">STATUS</th>
+                      <th class="sort" data-sort="action">PNL</th>
                       <th class="sort" data-sort="action">ACTIONS</th>
                     </tr>
 
@@ -364,9 +364,13 @@ export default {
                       <td class="location">{{ data.script }}</td>
                       <td class="location">{{ data.qty }}</td>
                       <td class="location">{{ data.entryprice }}</td>
-                      <td class="location">{{ data.pnl }}</td>
                       <td class="location">{{ data.ltp }}</td>
                       <td class="location">{{ data.status }}</td>
+                      <td class="location">
+                            <button class="btn btn-info" type="button">
+                            {{ data.pnl }}
+                          </button>
+                        </td>
                       <!-- <td class="tags">
                         <span v-for="(tag, index) of data.tags" :key="index">
                           &nbsp;<b-badge variant="soft-primary" class="badge-soft-primary"> {{ tag }}</b-badge>
