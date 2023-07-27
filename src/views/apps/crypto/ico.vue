@@ -7,6 +7,8 @@ import "@vueform/multiselect/themes/default.css";
 import Layout from "../../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
 import appConfig from "../../../../app.config";
+import Swal from "sweetalert2";
+// import axios from 'axios';
 
 export default {
   page: {
@@ -31,6 +33,9 @@ export default {
           active: true,
         },
       ],
+      showAddModal: false,
+      showEditModal: false,
+      editingIco: null, // Stores the ICO being edited
       value: null,
       value1: null,
       date: null,
@@ -201,6 +206,81 @@ export default {
       ],
     };
   },
+  methods: {
+    // Method to open the edit modal and set the data of the ICO being edited
+    openEditModal(ico) {
+      this.editingIco = { ...ico }; // Make a copy of the ICO data to avoid directly modifying the original data
+      this.showEditModal = true;
+    },
+
+    // Method to handle the save action when adding or editing ICO
+    saveIco() {
+      if (this.editingIco) {
+        // If this.editingIco is truthy, it means we are editing an existing ICO
+        // Save the changes to the data array with the edited ICO
+        const editedIndex = this.icosData.findIndex(
+          (group) => group.icos.indexOf(this.editingIco) !== -1
+        );
+        if (editedIndex !== -1) {
+          this.icosData[editedIndex].icos[
+            this.icosData[editedIndex].icos.indexOf(this.editingIco)
+          ] = { ...this.editingIco };
+        }
+        console.log(this.editingIco);
+        // After saving, close the edit modal
+        this.showEditModal = false;
+      } else {
+        // If this.editingIco is falsy, it means we are adding a new ICO
+        // Push the new ICO to the data array
+        const newIco = {
+          icon: require("@/assets/images/svg/crypto-icons/add.svg"),
+          name: this.newIcoName, // Replace 'this.newIcoName' with the actual name value from the input
+          category: this.newIcoCategory, // Replace 'this.newIcoCategory' with the actual category value from the input
+          amount: this.newIcoAmount, // Replace 'this.newIcoAmount' with the actual amount value from the input
+          percentage: this.newIcoPercentage, // Replace 'this.newIcoPercentage' with the actual percentage value from the input
+          stars: this.newIcoStars, // Replace 'this.newIcoStars' with the actual stars value from the input
+          days: this.newIcoDays, // Replace 'this.newIcoDays' with the actual days value from the input
+        };
+        console.log(newIco);
+        this.icosData[0].icos.shift(newIco); // Assuming you want to add the new ICO to the first group
+        // After saving, close the add modal
+        this.showAddModal = false;
+      }
+    },
+
+    // Method to handle the delete action
+    deleteIco(event) {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonColor: "#f46a6a",
+        confirmButtonColor: "#34c38f",
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.value) {
+          const groupIndex = this.icosData.findIndex(
+            (group) => group.icos.indexOf(event) !== -1
+          );
+          if (groupIndex !== -1) {
+            this.icosData[groupIndex].icos.splice(
+              this.icosData[groupIndex].icos.indexOf(event),
+              1
+            );
+          }
+          // axios.delete(`https://api-node.themesbrand.website/apps/contact/${event._id}`)
+          //   .then(() => {
+
+          //   }).catch((er) => {
+          //     console.log(er);
+          //   });
+          Swal.fire("Deleted!", "Your ICO has been deleted.", "success");
+        }
+      });
+      // Implement the logic to delete the ICO data here
+    },
+  },
   components: {
     Layout,
     PageHeader,
@@ -332,10 +412,113 @@ export default {
       </b-card-body>
     </b-card>
 
+    <!-- Modal for adding ICO -->
+    <!-- Add ICO modal -->
+    <b-modal v-model="showAddModal" id="showmodal" hide-footer title-class="exampleModalLabel"
+      header-class="p-3 bg-soft-info" class="v-modal-custom" centered size="lg" title="Add ICO">
+      <b-form action="" id="addform" class="tablelist-form" autocomplete="off">
+        <!-- Add your form fields for adding ICO data here -->
+        <b-row class="g-3">
+          <b-col lg="12">
+            <div>
+              <label for="name-field" class="form-label">Name</label>
+              <input v-model="newIcoName" type="text" id="ico-name" class="form-control" placeholder="Enter name" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="category-field" class="form-label">Category</label>
+              <input v-model="newIcoCategory" type="text" id="ico-category" class="form-control" placeholder="Enter category" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="amount-field" class="form-label">Amount</label>
+              <input v-model="newIcoAmount" type="text" id="ico-amount" class="form-control" placeholder="Enter amount" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="percentage-field" class="form-label">Percentage</label>
+              <input v-modal="newIcoPercentage" type="text" id="ico-percentage" class="form-control" placeholder="Enter percentage" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="stars-field" class="form-label">Stars</label>
+              <input v-modal="newIcoStars" type="text" id="ico-stars" class="form-control" placeholder="Enter stars" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="days-field" class="form-label">Days</label>
+              <input v-modal="newIcoDays" type="text" id="ico-days" class="form-control" placeholder="Enter days" required />
+            </div>
+          </b-col>
+        </b-row>
+        <div class="hstack gap-2 justify-content-end mt-3">
+          <b-button type="button" variant="light" @click="showAddModal = false" id="add-close-modal">Close</b-button>
+          <b-button type="button" variant="success" @click="saveIco">Add ICO</b-button>
+        </div>
+      </b-form>
+    </b-modal>
+
+    <!-- Modal for editing ICO -->
+    <!-- Edit ICO modal -->
+    <b-modal v-if="editingIco" v-model="showEditModal" id="showmodal" hide-footer title-class="exampleModalLabel"
+      header-class="p-3 bg-soft-info" class="v-modal-custom" centered size="lg" title="Edit ICO">
+      <b-form action="" id="editform" class="tablelist-form" autocomplete="off">
+        <!-- Add your form fields for editing ICO data here -->
+        <b-row class="g-3">
+          <b-col lg="12">
+            <div>
+              <label for="name-field" class="form-label">Name</label>
+              <input type="text" id="edit-ico-name" class="form-control" :value="editingIco.name" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="category-field" class="form-label">Category</label>
+              <input type="text" id="edit-ico-category" class="form-control" :value="editingIco.category" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="amount-field" class="form-label">Amount</label>
+              <input type="text" id="edit-ico-amount" class="form-control" :value="editingIco.amount" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="percentage-field" class="form-label">Percentage</label>
+              <input type="text" id="edit-ico-percentage" class="form-control" :value="editingIco.percentage" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="stars-field" class="form-label">Stars</label>
+              <input type="text" id="edit-ico-stars" class="form-control" :value="editingIco.stars" required />
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <label for="days-field" class="form-label">Days</label>
+              <input type="text" id="edit-ico-days" class="form-control" :value="editingIco.days" required />
+            </div>
+          </b-col>
+        </b-row>
+        <div class="hstack gap-2 justify-content-end mt-3">
+          <b-button type="button" variant="light" @click="showEditModal = false" id="edit-close-modal">Close</b-button>
+          <b-button type="button" variant="success" @click="saveIco">Update ICO</b-button>
+        </div>
+      </b-form>
+    </b-modal>
+
+
     <b-row>
       <b-col md="12" v-if="isAdmin">
         <div class="d-flex mb-2">
-          <button class="btn btn-success" >
+          <button class="btn btn-success" @click="showAddModal = true">
             <i class="ri-add-line"></i> Add ICOs
           </button>
         </div>
@@ -383,11 +566,11 @@ export default {
          </b-card-body>
          <div v-if="isAdmin" class='d-flex align-items-center justify-content-between m-1'>
             <!-- Button for editing data -->
-            <button class="btn btn-outline-warning" >
+            <button class="btn btn-outline-warning" @click="openEditModal(ico)">
               <i class="ri-edit-line"></i> Edit
             </button>
             <!-- Button for adding data -->
-            <button class="btn btn-outline-danger" >
+            <button class="btn btn-outline-danger" @click="deleteIco(index)">
               <i class="ri-delete-bin-line"></i> Delete
             </button>
          </div>

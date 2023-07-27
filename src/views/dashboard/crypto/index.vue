@@ -891,13 +891,13 @@ export default {
             <div v-if="showDashboard">
               <b-card no-body>
                 <b-card-header class="d-flex align-items-center border-0">
-                  <h5 class="card-title mb-0 flex-grow-1">All Order</h5>
-                  <div class="flex-shrink-0">
+                  <h5 class="card-title mb-0 flex-grow-1">All Position</h5>
+                  <!-- <div class="flex-shrink-0">
                     <div class="flax-shrink-0 hstack gap-2">
-                      <b-button variant="primary">Today's Order</b-button>
-                      <b-button variant="soft-info">Past Order</b-button>
+                      <b-button variant="primary">Today's Position</b-button>
+                      <b-button variant="soft-info">Past Position</b-button>
                     </div>
-                  </div>
+                  </div> -->
                 </b-card-header>
                 <!-- <b-card-body
                   class="border border-dashed border-end-0 border-start-0"
